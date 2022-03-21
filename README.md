@@ -1,9 +1,2 @@
 # bt_team4
-
-test development?
-
-RIP
-
-hallo dennis 
-
-test dennis
+_Description comes here_
