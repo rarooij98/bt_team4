@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+
+    <% scholen.forEach(function(school) { %>
+    <h3>{{school.name}}</h3>
+    <ul>
+      <li>Locatie: {{school.locatie}}</li>
+      <li>Niveau: {{school.niveau}}</li>
+      <li>Onderwerpen: {{school.onderwerpen}}</li>
+    </ul>
+    <% }) %>

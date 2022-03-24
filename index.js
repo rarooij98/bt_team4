@@ -32,9 +32,28 @@ app.get('/keuzes', (req, res) => {
     res.render('keuzes')
 })
 
-app.get('/matches', (req, res) => {
-    res.render('matches')
-}) 
+// er wordt uit het formulier een keuze gehaald en opgeslagen in de database
+// dit kan later ook opgeslagen worden met een sessie ipv opslaan in de db
+app.post('/keuzes', upload.single(), (req, res) => {
+  db.collection('voorkeuren').insertOne({locatie: req.body.locatie, niveau: req.body.niveau, onderwerp: req.body.onderwerp})
+  res.redirect('matches')
+})
+
+// alle scholen die voldoen aan de voorkeuren worden opgehaald uit de database
+app.get('/matches', async (req, res) => {
+  const keuze = await db.collection('voorkeuren').findOne() //keuze document ophalen uit de db
+  
+  //filter en sorteer opties
+  const queryLocatie = {locatie: keuze.locatie};
+  const queryNiveau = {niveau: keuze.niveau};
+  //const queryOnderwerp = {onderwerp: keuze.onderwerp}; //werkt nog niet
+  const query = {...queryLocatie, ...queryNiveau};
+  const options = {sort: {name: 1}};
+  
+  const scholen = await db.collection('scholen').find(query, options).toArray();
+  const title  = (scholen.length == 0) ? "Er zijn geen matches gevonden" : "Dit zijn je matches!"; //error handling
+  res.render('matches', {title: title, scholen: scholen})
+})
   
 // 404  //
 app.get('*', (req, res) => {
