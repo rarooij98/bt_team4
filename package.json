@@ -7,10 +7,8 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "handlebars": "^4.7.7",
-    "mongoose": "^6.2.8"
-  },
-  "devDependencies": {
-    
+    "mongoose": "^6.2.8",
+    "socket.io": "^4.4.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
