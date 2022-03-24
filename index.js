@@ -12,6 +12,17 @@ const dotenv = require('dotenv').config()
 const port = process.env.PORT || 3000
 let db = null
 
+// middleware //
+app.use(express.static('static'))
+app.use(express.json())
+app.use(bodyParser.urlencoded({extended: false}))
+
+// set view engine //
+const {engine} = require('express-handlebars')
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+app.set('views', 'views')
+
 // connectie naar db //
 async function connectDB() {
   const uri = process.env.CONNECTION_STRING
