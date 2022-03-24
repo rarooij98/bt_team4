@@ -23,6 +23,24 @@ app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', 'views')
 
+// routes //
+app.get('/', (req, res) => {
+    res.render('index')
+})
+  
+app.get('/keuzes', (req, res) => {
+    res.render('keuzes')
+})
+
+app.get('/matches', (req, res) => {
+    res.render('matches')
+}) 
+  
+// 404  //
+app.get('*', (req, res) => {
+    res.send('404 Not Found')
+})
+
 // connectie naar db //
 async function connectDB() {
   const uri = process.env.CONNECTION_STRING
