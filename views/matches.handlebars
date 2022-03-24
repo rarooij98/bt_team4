@@ -1,15 +1,16 @@
 <h1>{{title}}</h1>
+<h2>Je hebt {{scholen.length}} nieuwe matches!</h2>
 
-<h3>Je hebt {{scholen.length}} nieuwe match(es)!</h3>
-
+<article>
 {{#each scholen}}
 <!--voor elk resultaat wordt een card gemaakt met de info-->
 <section>
   <h3>{{this.name}}</h3>
     <ul>
-      <li>Locatie: {{this.locatie}}</li>
-      <li>Niveau: {{this.niveau}}</li>
-      <li>Onderwerpen: {{this.onderwerpen}}</li>
+      <li> <p>Locatie: </p> {{this.locatie}}</li>
+      <li> <p>Niveau: </p> {{this.niveau}}</li>
+      <li> <p>Onderwerpen: </p>{{this.onderwerpen}}</li>
     </ul>
 </section>
 {{/each}}
+</article>

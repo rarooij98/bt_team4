@@ -51,7 +51,7 @@ app.get('/matches', async (req, res) => {
   const options = {sort: {name: 1}};
   
   const scholen = await db.collection('scholen').find(query, options).toArray();
-  const title  = (scholen.length == 0) ? "Er zijn geen matches gevonden" : "Dit zijn je matches"; //error handling
+  const title  = (scholen.length == 0) ? "Er zijn geen matches gevonden" : "Matches:"; //error handling
   res.render('matches', {title: title, scholen: scholen})
 })
   
