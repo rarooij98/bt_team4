@@ -21,11 +21,11 @@ app.use(bodyParser.urlencoded({extended: false}))
 const {engine} = require('express-handlebars')
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
-app.set('views', 'views')
+app.set('views', './views')
 
 // routes //
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('index', {text: "Hello world"})
 })
   
 app.get('/keuzes', (req, res) => {
