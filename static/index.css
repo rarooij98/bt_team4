@@ -1,3 +1,9 @@
 body {
 background: rgb(255, 240, 240);
 }
+
+section {
+background: rgb(255, 255, 255);
+border: solid 2px black;
+padding: 1em;
+}
