@@ -4,7 +4,11 @@ const port = process.env.port || 3000;
 
 //engine kiezen
 const engine = require('handlebars');
-app.engine('handlebars', engine)
+app.engine('handlebars', engine({
+    extname: "hbs",
+    layoutsDir: __dirname + '/views/layouts',
+    partialsDir: __dirname + '/views/partials',
+}))
 app.set('view engine', 'handlebars')
 app.set('views', './views')
 
