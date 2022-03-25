@@ -1,10 +1,21 @@
-const express = require('express')
-const {engine} = require('express-handlebars')
-const bodyParser = require('body-parser')
-const app = express()
-const router = express.Router()
+// require MongoDB
+const mongoose = require('mongoose')
 
+// connect to MongoDB
+const connectDB = () => {
+  try {
+    mongoose.connect (process.env.CONNECTION_STRING, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    });
+    console.log('DB - connected')
+  } catch (err) {
+    console.log ('error occured while trying to connect to db',)
+  }
+ }
+ module.exports = connectDB
 
+<<<<<<< HEAD
 const port = process.env.port || 8000
 
 require('dotenv').config()
@@ -40,3 +51,5 @@ app.listen(port, () => {
   
   
   
+=======
+>>>>>>> a322f40f343c10681a498f88f8b54eaba770a017
