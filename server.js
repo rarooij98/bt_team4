@@ -3,9 +3,9 @@ const app = express();
 const port = process.env.port || 3000;
 
 //engine kiezen
-const engine = require('handlebars');
+const { engine } = require('express-handlebars');
 app.engine('handlebars', engine({
-    extname: "hbs",
+    extname: "handlebars",
     layoutsDir: __dirname + '/views/layouts',
     partialsDir: __dirname + '/views/partials',
 }))
