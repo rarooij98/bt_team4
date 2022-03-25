@@ -41,38 +41,27 @@ app.post('/keuzes', upload.single(), (req, res) => {
 
 // alle scholen die voldoen aan de voorkeuren worden opgehaald uit de database
 app.get('/matches', async (req, res) => {
-  const keuze = await db.collection('voorkeuren').findOne() //keuze document ophalen uit de db
+  const keuze = await db.collection('voorkeuren').findOne();
   
-  //filter en sorteer opties
   const queryLocatie = {locatie: keuze.locatie};
   const queryNiveau = {niveau: keuze.niveau};
-  const queryOnderwerp = [{onderwerp: keuze.onderwerp}]; //werkt nog niet //in een array gezet
+  //const queryOnderwerp = {onderwerp: keuze.onderwerp}; //werkt nog niet
+  const queryOnderwerp = {};
   
-  // ONDERWERPEN ARRAY // 
-  // 1: scholen ophalen uit de database
-  const scholen = []
-  const scholen = await db.collection('scholen').find().toArray()
-  console.log(scholen)
+  // 1: Elke school heeft een array met onderwerpen, deze wil ik voor elke school ophalen uit de database.
+  const onderwerpen = await db.collection('scholen').find({}, {onderwerpen: 1}).toArray();
+  console.log(onderwerpen); //logt nu alle velden, ik wil alleen het 'onderwerpen' veld
   
-  // 2: dan de onderwerpen array halen uit deze scholen?
-  const onderwerpen = []
-  const onderwerpen = {onderwerpen: scholen.onderwerpen}
-  console.log(onderwerpen)
-  
-  //const onderwerpen = ["Design en Creatie", "Media en Communicatie", "Techniek", "Mens en Maatschappij", "Economie en Management", "ICT", "Sport en Voeding", "Recht en Bestuur", "Onderwijs en Opvoeding"];
-  //ipv deze array moet voor elke school de array gecheckt worden
-  if  (onderwerpen.includes(keuze.onderwerp) == true){
-    console.log("wat ingevuld is staat in de array")
-    // dan moet de school toegevoegd worden aan de resultaten
-    // hoe zet ik dit in de query?
-  }
+  // 2: Dan wil ik filteren: voor elk item uit de array van onderwerpen, komt het item overeen met het gekozen onderwerp?
+  const filtered = onderwerpen.filter(x => x == keuze.onderwerp);
+  console.log(filtered); //logt nu een lege array
   
   const query = {...queryLocatie, ...queryNiveau, ...queryOnderwerp};
   const options = {sort: {name: 1}};
   
   const scholen = await db.collection('scholen').find(query, options).toArray();
   const title  = (scholen.length == 0) ? "Er zijn geen matches gevonden" : "Matches:"; //error handling
-  res.render('matches', {title: title, scholen: scholen})
+  res.render('matches', {title: title, scholen: scholen});
 })
   
 // 404  //
