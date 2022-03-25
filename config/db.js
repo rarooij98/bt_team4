@@ -15,7 +15,6 @@ const connectDB = () => {
  }
  module.exports = connectDB
 
-<<<<<<< HEAD
 const port = process.env.port || 8000
 
 require('dotenv').config()
@@ -51,5 +50,3 @@ app.listen(port, () => {
   
   
   
-=======
->>>>>>> a322f40f343c10681a498f88f8b54eaba770a017
