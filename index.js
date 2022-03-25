@@ -46,8 +46,17 @@ app.get('/matches', async (req, res) => {
   //filter en sorteer opties
   const queryLocatie = {locatie: keuze.locatie};
   const queryNiveau = {niveau: keuze.niveau};
-  //const queryOnderwerp = {onderwerp: keuze.onderwerp}; //werkt nog niet
-  const query = {...queryLocatie, ...queryNiveau};
+  const queryOnderwerp = {onderwerp: keuze.onderwerp}; //werkt nog niet
+  
+  const onderwerpen = ["Design en Creatie", "Media en Communicatie", "Techniek", "Mens en Maatschappij", "Economie en Management", "ICT", "Sport en Voeding", "Recht en Bestuur", "Onderwijs en Opvoeding"];
+  //ipv deze array moet voor elke school de array gecheckt worden
+  if  (onderwerpen.includes(keuze.onderwerp) == true){
+    console.log("wat ingevuld is staat in de array")
+    // dan moet de school toegevoegd worden aan de resultaten
+    // hoe zet ik dit in de query?
+  }  
+  
+  const query = {...queryLocatie, ...queryNiveau, ...queryOnderwerp};
   const options = {sort: {name: 1}};
   
   const scholen = await db.collection('scholen').find(query, options).toArray();
