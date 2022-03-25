@@ -10,7 +10,7 @@ const port = process.env.port || 8000
 require('dotenv').config()
 
 
-const connectDB = require('./db')
+const connectDB = require('./config/db')
 const res = require('express/lib/response')
 connectDB();
 
