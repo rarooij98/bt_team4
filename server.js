@@ -1,10 +1,14 @@
-const express = require('express')
-const app = express()
-const port = process.env.port || 3000
+const express = require('express');
+const app = express();
+const port = process.env.port || 3000;
 
 //engine kiezen
-const engine = require('express-handlebars')
-app.engine('handlebars', engine)
+const { engine } = require('express-handlebars');
+app.engine('handlebars', engine({
+    extname: "handlebars",
+    layoutsDir: __dirname + '/views/layouts',
+    partialsDir: __dirname + '/views/partials',
+}))
 app.set('view engine', 'handlebars')
 app.set('views', './views')
 
@@ -17,6 +21,4 @@ app.get('/', (req, res) => {
     })
 
 //Server luistert op poort 8080
-app.listen(port, () => {
-    console.log('Server running on localhost:3000')
-})
+app.listen(port)
