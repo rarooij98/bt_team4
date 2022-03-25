@@ -1,4 +1,14 @@
 {
+  "name": "projecttech",
+  "version": "1.0.0",
+  "description": "matching app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node db.js",
+    "dev": "nodemon db.js"
+  },
+
   "dependencies": {
     "body-parser": "^1.19.2",
     "dotenv": "^16.0.0",
