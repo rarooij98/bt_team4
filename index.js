@@ -46,15 +46,26 @@ app.get('/matches', async (req, res) => {
   //filter en sorteer opties
   const queryLocatie = {locatie: keuze.locatie};
   const queryNiveau = {niveau: keuze.niveau};
-  const queryOnderwerp = {onderwerp: keuze.onderwerp}; //werkt nog niet
+  const queryOnderwerp = [{onderwerp: keuze.onderwerp}]; //werkt nog niet //in een array gezet
   
-  const onderwerpen = ["Design en Creatie", "Media en Communicatie", "Techniek", "Mens en Maatschappij", "Economie en Management", "ICT", "Sport en Voeding", "Recht en Bestuur", "Onderwijs en Opvoeding"];
+  // ONDERWERPEN ARRAY // 
+  // 1: scholen ophalen uit de database
+  const scholen = []
+  const scholen = await db.collection('scholen').find().toArray()
+  console.log(scholen)
+  
+  // 2: dan de onderwerpen array halen uit deze scholen?
+  const onderwerpen = []
+  const onderwerpen = {onderwerpen: scholen.onderwerpen}
+  console.log(onderwerpen)
+  
+  //const onderwerpen = ["Design en Creatie", "Media en Communicatie", "Techniek", "Mens en Maatschappij", "Economie en Management", "ICT", "Sport en Voeding", "Recht en Bestuur", "Onderwijs en Opvoeding"];
   //ipv deze array moet voor elke school de array gecheckt worden
   if  (onderwerpen.includes(keuze.onderwerp) == true){
     console.log("wat ingevuld is staat in de array")
     // dan moet de school toegevoegd worden aan de resultaten
     // hoe zet ik dit in de query?
-  }  
+  }
   
   const query = {...queryLocatie, ...queryNiveau, ...queryOnderwerp};
   const options = {sort: {name: 1}};
