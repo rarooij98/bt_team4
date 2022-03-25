@@ -5,12 +5,12 @@ const app = express()
 const router = express.Router()
 
 
-const port = proCocess.env.port || 8000
+const port = process.env.port || 8000
 
 require('dotenv').config()
 
 
-const connectDB = require('./config/db')
+const connectDB = require('./db')
 const res = require('express/lib/response')
 connectDB();
 
@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
    })
 
 
-
+// functie om te connecten naar db //
 
 
 
