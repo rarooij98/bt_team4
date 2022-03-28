@@ -1,0 +1,92 @@
+ /* Google font inladen */
+ @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap');
+ 
+ /* Alles in dit specifieke ingeladen font  */
+* {
+    font-family: 'Fredoka';
+}
+
+ body {
+    background-color: #8DCFCB;
+    color: #F4FFFE;
+}
+
+header nav ul{
+    background-color: none;  
+    display: flex; 
+    padding: 3em;
+    justify-content: flex-end;
+}
+ 
+header li {
+    list-style-type: none;
+}
+
+header li a {
+    font-size: 1.2em;
+    color: #F4FFFE;
+    text-decoration: none;
+    padding: 2em;
+    font-weight: 300;
+}
+
+header li a:hover {
+    color:tomato;
+}
+
+button {
+    background-color: tomato;
+    border: none;
+    border-radius: 1em;
+}
+.signinButton {
+    color: #F4FFFE;
+}
+
+.signinButton :hover {
+    background-color:#F4FFFE;;
+}
+
+/* Alles om het logo op zijn plaatst te zetten en te laten werken */
+
+header .logo {
+    justify-content: flex-start;
+    float: left;
+}
+
+header .logo img {
+    align-content: ;
+    max-width: 15em;
+    margin-top: 1em;
+}
+
+/* Inlog form */
+
+
+.homeInlog {
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.homeInlog form{
+    background-color:#022756;
+    padding-left: 8em;
+    padding-right: 8em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    border-radius: 2em;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 1em;
+  }
+
+  #meldAan {
+      color:tomato;
+      text-decoration: none;
+  }
