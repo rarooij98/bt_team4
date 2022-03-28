@@ -42,23 +42,12 @@ app.post('/keuzes', upload.single(), (req, res) => {
 // alle scholen die voldoen aan de voorkeuren worden opgehaald uit de database
 app.get('/matches', async (req, res) => {
   const keuze = await db.collection('voorkeuren').findOne();
-  
   const queryLocatie = {locatie: keuze.locatie};
   const queryNiveau = {niveau: keuze.niveau};
-  //const queryOnderwerp = {onderwerp: keuze.onderwerp}; //werkt nog niet
-  const queryOnderwerp = {};
-  
-  // 1: Elke school heeft een array met onderwerpen, deze wil ik voor elke school ophalen uit de database.
-  const onderwerpen = await db.collection('scholen').find({}, {onderwerpen: 1}).toArray();
-  console.log(onderwerpen); //logt nu alle velden, ik wil alleen het 'onderwerpen' veld
-  
-  // 2: Dan wil ik filteren: voor elk item uit de array van onderwerpen, komt het item overeen met het gekozen onderwerp?
-  const filtered = onderwerpen.filter(x => x == keuze.onderwerp);
-  console.log(filtered); //logt nu een lege array
+  const queryOnderwerp = {onderwerpen: keuze.onderwerp};
   
   const query = {...queryLocatie, ...queryNiveau, ...queryOnderwerp};
   const options = {sort: {name: 1}};
-  
   const scholen = await db.collection('scholen').find(query, options).toArray();
   const title  = (scholen.length == 0) ? "Er zijn geen matches gevonden" : "Matches:"; //error handling
   res.render('matches', {title: title, scholen: scholen});
