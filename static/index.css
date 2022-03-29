@@ -1,71 +1,92 @@
+/* Google font inladen */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap');
+ 
+/* Alles in dit specifieke ingeladen font  */
+* {
+   font-family: 'Fredoka';
+}
+
 body {
-background: rgb(241, 241, 241);
-font-family: sans-serif;
-margin: 2em;
+   background-color: #8DCFCB;
+   color: #F4FFFE;
 }
 
-article {
-display: flex;
-flex-wrap: wrap;
+header nav ul{
+   background-color: none;  
+   display: flex; 
+   padding: 3em;
+   justify-content: flex-end;
 }
 
-section {
-background: rgb(255, 255, 255);
-width: 30em;
-box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.1);
-border-radius: 0.25em;
-padding: 1em;
-margin: 1em 1em 1em 0em;
+header li {
+   list-style-type: none;
 }
 
-section:hover {
-background: rgb(250, 250, 250);
-box-shadow: 0px 4px 8px -1px rgba(0, 0, 0, 0.2);
+header li a {
+   font-size: 1.2em;
+   color: #F4FFFE;
+   text-decoration: none;
+   padding: 2em;
+   font-weight: 300;
 }
 
-section ul {
-list-style: none;
-padding-left: 1.2em;
+header li a:hover {
+   color:tomato;
 }
 
-form {
-display: flex;
-flex-direction: column;
-gap: 1em;
+button {
+   background-color: tomato;
+   border: none;
+   border-radius: 1em;
+}
+.signinButton {
+   color: #F4FFFE;
 }
 
-form select {
-width: 10em;
+.signinButton :hover {
+   background-color:#F4FFFE;
 }
 
-input[type=submit]{
-background-color: rgb(203, 235, 252);
-border: solid 1px rgb(118, 118, 118);
-padding: 0.5em;
+/* Alles om het logo op zijn plaatst te zetten en te laten werken */
+
+header .logo {
+   justify-content: flex-start;
+   float: left;
 }
 
-ul p {
-display: inline;
-font-weight: 600;
-color: rgb(6, 140, 208);
+header .logo img {
+   align-content: ;
+   max-width: 15em;
+   margin-top: 1em;
 }
 
-h2 {
-color: rgb(5, 175, 5);
-font-size: 1.25em;
+/* Inlog form */
+
+
+.homeInlog {
+   display: flex;
+   justify-content: center;
+   padding-top: 2em;
 }
 
-h3 {
-margin-left: 1em;
+.homeInlog form{
+   background-color:#022756;
+   padding-left: 8em;
+   padding-right: 8em;
+   padding-top: 3em;
+   padding-bottom: 3em;
+   border-radius: 2em;
 }
 
-a {
-text-decoration: none;
-color: black;
-display: block;
-width: fit-content;
-margin-top: 2em;
-background-color: rgb(203, 235, 252);
-border: solid 1px rgb(118, 118, 118);
-padding: 0.5em;
-}
+input {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   box-sizing: border-box;
+   font-size: 1em;
+ }
+
+ #meldAan {
+     color:tomato;
+     text-decoration: none;
+ }
