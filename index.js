@@ -1,8 +1,11 @@
 const express = require('express')
 const {engine} = require('express-handlebars')
 const bodyParser = require('body-parser')
+const cookieParser = require("cookie-parser");
+const sessions = require('express-session');
 const app = express()
 const router = express.Router()
+
 
 const reglog = require('./controllers/reglog');
 
@@ -20,6 +23,14 @@ app.set('view engine', 'handlebars');
 app.set('views', './views');
 
 app.use(bodyParser.urlencoded({ extended: true   }));
+
+//Hierdoor blijft de gebruiker ingelogt ookal herlaad de pagina.
+app.use(sessions({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 
 app.use(express.static(__dirname + '/static'));
 
