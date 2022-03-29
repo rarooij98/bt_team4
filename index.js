@@ -2,6 +2,8 @@ const express = require('express')
 const {engine} = require('express-handlebars')
 const bodyParser = require('body-parser')
 const cookieParser = require("cookie-parser");
+const mongoose = require('mongoose');
+const User = require('./models/user')
 const sessions = require('express-session');
 const app = express()
 const router = express.Router()
@@ -32,14 +34,19 @@ app.use(sessions({
   })
 );
 
+app.use(express.json());
+
 app.use(express.static(__dirname + '/static'));
 
 app.use(express.urlencoded({ extended: true}));
+
+app.use(cookieParser());
 
 
 app.get('/', (req, res) => {
     res.render('home')
    })
+
 
 
 // functie om te connecten naar db //

@@ -13,4 +13,5 @@ const connectDB = () => {
     console.log ('error occured while trying to connect to db',)
   }
  }
- module.exports = connectDB
+ 
+ module.exports = connectDB;
