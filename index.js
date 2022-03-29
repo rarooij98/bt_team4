@@ -1,8 +1,11 @@
 const express = require('express')
-const {engine} = require('express-handlebars')
-const bodyParser = require('body-parser')
 const app = express()
-const router = express.Router()
+const {engine} = require('express-handlebars')
+require('dotenv').config()
+const connectDB = require('./config/db')
+const mongoose = require('mongoose')
+const User = require("./models/user")
+const req = require('express/lib/request')
 
 const reglog = require('./controllers/reglog');
 
@@ -10,6 +13,7 @@ const port = process.env.port || 8000
 
 require('dotenv').config()
 
+//router();
 
 const connectDB = require('./config/db')
 const res = require('express/lib/response')
@@ -31,7 +35,7 @@ app.get('/', (req, res) => {
    })
 
 
-// functie om te connecten naar db //
+app.use("/", require('./controllers/reglog'));
 
 
 
