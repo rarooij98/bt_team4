@@ -8,8 +8,8 @@ const upload = multer({dest: 'static/uploads/'})
 const mongoose = require('mongoose')
 const Keuze = require("./models/user")
 const {redirect} = require('express/lib/response')
-let db = null
 
+let db = null
 const port = process.env.port || 8000
 
 require('dotenv').config()
@@ -51,21 +51,25 @@ app.post('/form', upload.single(), (req, res) => {
 // alle scholen die voldoen aan de voorkeuren worden opgehaald uit de database
 app.get('/matches', async (req, res) => {
   const keuze = await Keuze.findOne();
-  
+
   const queryLocatie = {locatie: keuze.locatie};
   const queryNiveau = {niveau: keuze.niveau};
-  const queryOnderwerp = {onderwerpen: keuze.onderwerp};
+  const queryOnderwerp = {onderwerpen:{$in: keuze.onderwerp}};
   const query = {...queryLocatie, ...queryNiveau, ...queryOnderwerp};
   const options = {sort: {name: 1}};
   
-  // TO DO - dit nog laten werken met mongoose:
-  // collectie scholen moet opgehaald worden uit de database
-  // db.scholen = null, collection = null, Scholen is not defined
-  const scholen = await db.collectie('scholen').find(query, options);
-  console.log(scholen)
-  
-  const title  = (scholen.length == 0) ? "Er zijn geen matches gevonden" : "Matches:";
-  res.render('matches', {title: title, scholen: scholen});
+  // We moeten het schema specificeren, ook al verwijzen we naar de bestaande verzameling in DB:
+  const Schema = mongoose.Schema;  
+  const scholen = mongoose.model("scholen", new Schema({
+    name: String,
+    locatie: String,
+    niveau: String,
+    onderwerpen: Array
+    }), "scholen");
+
+  const filtered = await scholen.find(query, null, options).lean();
+  const title = (scholen.length == 0) ? "Er zijn geen matches gevonden" : "Matches:";
+  res.render('matches', {title: title, scholen: filtered});
 })
   
 // 404  //

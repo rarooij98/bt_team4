@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const keuzeSchema = new Schema({
     locatie: String,
     niveau: String,
-    onderwerp: Array 
+    onderwerp: [String]
 });
 
 const Keuze = mongoose.model('Keuze', keuzeSchema)
