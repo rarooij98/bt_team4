@@ -19,8 +19,8 @@ Als je van plan bent de repository te clonen en de applicatie te gebruiken heb j
 
 # Belangrijke commits
 
-Sanne 776cf0cc2eeaec24d3f7b5fa17b3d49ae6107ff5 - setup handlebars <br>
-Sanne a2d468f018c64f4ad970da1acdd5c1050a01440a - db connected en pagina live
+Sanne - 776cf0cc2eeaec24d3f7b5fa17b3d49ae6107ff5 - setup handlebars <br>
+Sanne - a2d468f018c64f4ad970da1acdd5c1050a01440a - db connected en pagina live
 
 ## Licence
  MIT License
