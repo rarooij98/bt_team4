@@ -87,3 +87,5 @@ app.get('/login', (req, res) =>{
 app.listen(port, () => {
     console.log('Server running on localhost:8080')
 })
+
+module.exports = reglog;

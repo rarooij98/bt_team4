@@ -3,8 +3,8 @@ const {engine} = require('express-handlebars')
 const bodyParser = require('body-parser')
 const app = express()
 const router = express.Router()
-const reglog = require('./controllers/reglog')
 
+const reglog = require('./controllers/reglog');
 
 const port = process.env.port || 8000
 
