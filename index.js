@@ -9,10 +9,12 @@ const port = process.env.port || 8000
 
 require('dotenv').config()
 
-
 const connectDB = require('./config/db')
 const res = require('express/lib/response')
 connectDB();
+
+const passport = require('passport');
+require('./auth');
 
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
@@ -28,6 +30,10 @@ app.use(express.urlencoded({ extended: true}));
 app.get('/', (req, res) => {
     res.render('home')
 })
+
+app.get('/auth/google',
+  passport.authenticate('google', { scope: [ 'email', 'profile' ] }
+));
 
 app.get('/', (req, res) => {
   res.render('loggedin')
