@@ -27,8 +27,11 @@ app.use(express.urlencoded({ extended: true}));
 
 app.get('/', (req, res) => {
     res.render('home')
-   })
+})
 
+app.get('/', (req, res) => {
+  res.render('loggedin')
+})
 
 // functie om te connecten naar db //
 
