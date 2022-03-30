@@ -2,13 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap');
  
 /* Alles in dit specifieke ingeladen font  */
-* {
+*, *::before, *::after {
+   box-sizing: border-box;
    font-family: 'Fredoka';
+ }
+
+:root {
+   --bg-light: #8dcfcb;
+   --bg-dark: #022756;
+   --accent-color: #ff6347;
+   --light-text: #f4fffe;
+   --dark-text: #000000;
 }
 
 body {
-   background-color: #8DCFCB;
-   color: #F4FFFE;
+   background-color: var(--bg-light);
+   color: var(--light-text);
 }
 
 header nav ul{
@@ -24,27 +33,27 @@ header li {
 
 header li a {
    font-size: 1.2em;
-   color: #F4FFFE;
+   color: var(--light-text);
    text-decoration: none;
    padding: 2em;
    font-weight: 300;
 }
 
 header li a:hover {
-   color:tomato;
+   color: var(--accent-color);
 }
 
 button {
-   background-color: tomato;
+   background-color: var(--accent-color);
    border: none;
    border-radius: 1em;
 }
 .signinButton {
-   color: #F4FFFE;
+   color: var(--light-text);
 }
 
 .signinButton :hover {
-   background-color:#F4FFFE;
+   background-color: var(--light-text);
 }
 
 /* Alles om het logo op zijn plaatst te zetten en te laten werken */
@@ -55,7 +64,7 @@ header .logo {
 }
 
 header .logo img {
-   align-content: ;
+   /* align-content: ; */
    max-width: 15em;
    margin-top: 1em;
 }
@@ -70,7 +79,7 @@ header .logo img {
 }
 
 .homeInlog form{
-   background-color:#022756;
+   background-color: var(--bg-dark);
    padding-left: 8em;
    padding-right: 8em;
    padding-top: 3em;
@@ -87,6 +96,115 @@ input {
  }
 
  #meldAan {
-     color:tomato;
+     color: var(--accent-color);
      text-decoration: none;
  }
+ 
+ /**  VOORKEUR & FILTER  **/
+
+/* filter algemeen */
+   
+.resultaten h1, .keuze h1, .filter h1 {
+   text-align: center;
+}
+
+.filter p {
+text-align: center;
+}
+
+.filter a, .resultaten a {
+text-decoration: none;
+color: var(--light-text);
+display: block;
+width: fit-content;
+margin: 2em auto;
+background-color: var(--accent-color);
+border: none;
+border-radius: 0.5em;
+padding: 0.75em;
+}
+
+/* keuze formulier */
+
+.keuze {
+background-color:#022756;
+border-radius: 2em;
+width: fit-content;
+margin: auto;
+padding: 1em;
+}
+
+.keuze form {
+display: flex;
+flex-direction: column;
+gap: 1em;
+padding: 3em 8em;
+}
+
+.keuze select {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+font-size: 1em;
+}
+
+.keuze input[type=submit]{
+color: var(--light-text);
+background-color: var(--accent-color);
+border: none;
+border-radius: 1em;
+width: fit-content;
+display: block;
+margin: 2em auto 0em auto;
+}   
+
+/* filter resultaten */
+
+.resultaten h2 {
+color: var(--accent-color);
+font-size: 1.25em;
+text-align: center;
+}
+
+.resultaten h3 {
+margin-left: 1em;
+}
+
+.resultaten section {
+display: flex;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: stretch;
+}
+
+.card {
+height: 250px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+background: rgb(255, 255, 255);
+width: 30em;
+box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.1);
+border-radius: 0.25em;
+padding: 1em;
+margin: 1em 1em 1em 0em;
+}
+
+.card:hover {
+background: rgb(250, 250, 250);
+box-shadow: 0px 4px 8px -1px rgba(0, 0, 0, 0.2);
+}
+
+.card h3, .card p, .card li {
+color: var(--dark-text);
+}
+
+.card ul {
+list-style: none;
+padding-left: 1.2em;
+}
+
+.card ul p {
+display: inline;
+font-weight: 600;
+}
