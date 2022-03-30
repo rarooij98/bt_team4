@@ -1,15 +1,83 @@
-body {
-background: rgb(241, 241, 241);
-font-family: sans-serif;
-margin: 2em;
-}
+/* algemeen */
+  
+   h1 {
+   text-align: center;
+   }
+   
+   h2 {
+   color: tomato;
+   font-size: 1.25em;
+   text-align: center;
+   }
+   
+   h3 {
+   margin-left: 1em;
+   }
+   
+   h1 + p {
+   text-align: center;
+   }
+   
+   main a {
+   text-decoration: none;
+   color: white;
+   display: block;
+   width: fit-content;
+   margin: 2em auto;
+   background-color: tomato;
+   border: none;
+   border-radius: 0.5em;
+   padding: 0.75em;
+   }
+   
+/* keuze formulier */
+
+section {
+   background-color:#022756;
+   border-radius: 2em;
+   width: fit-content;
+   margin: auto;
+   padding: 1em;
+   }
+   
+   form {
+   display: flex;
+   flex-direction: column;
+   gap: 1em;
+   padding: 3em 8em;
+   }
+   
+   select {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   font-size: 1em;
+   }
+   
+   input[type=submit]{
+   color: white;
+   background-color: tomato;
+   border: none;
+   border-radius: 1em;
+   width: fit-content;
+   display: block;
+   margin: 2em auto 0em auto;
+   }   
+   
+/* cards van de matches */
 
 article {
 display: flex;
 flex-wrap: wrap;
+justify-content: center;
+align-items: stretch;
 }
 
-section {
+.card {
+height: 250px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 background: rgb(255, 255, 255);
 width: 30em;
 box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.1);
@@ -18,54 +86,21 @@ padding: 1em;
 margin: 1em 1em 1em 0em;
 }
 
-section:hover {
+.card:hover {
 background: rgb(250, 250, 250);
 box-shadow: 0px 4px 8px -1px rgba(0, 0, 0, 0.2);
 }
 
-section ul {
+.card h3, .card p, .card li {
+   color: black;
+}
+
+.card ul {
 list-style: none;
 padding-left: 1.2em;
 }
 
-form {
-display: flex;
-flex-direction: column;
-gap: 1em;
-}
-
-form select {
-width: 10em;
-}
-
-input[type=submit]{
-background-color: rgb(203, 235, 252);
-border: solid 1px rgb(118, 118, 118);
-padding: 0.5em;
-}
-
-ul p {
-display: inline;
-font-weight: 600;
-color: rgb(6, 140, 208);
-}
-
-h2 {
-color: rgb(5, 175, 5);
-font-size: 1.25em;
-}
-
-h3 {
-margin-left: 1em;
-}
-
-a {
-text-decoration: none;
-color: black;
-display: block;
-width: fit-content;
-margin-top: 2em;
-background-color: rgb(203, 235, 252);
-border: solid 1px rgb(118, 118, 118);
-padding: 0.5em;
+.card ul p {
+   display: inline;
+   font-weight: 600;
 }
