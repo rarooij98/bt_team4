@@ -4,6 +4,10 @@ const bodyParser = require('body-parser')
 
 require('./auth');
 
+function IsLoggedIn(req, res, next) {
+  req.user ? next() : res.sendStatus(401);
+}
+
 const app = express()
 const router = express.Router()
 
@@ -36,7 +40,18 @@ app.get('/auth/google',
   passport.authenticate('google', { scope: [ 'email', 'profile' ] }
 ));
 
-app.get('/protected', (req, res) => {
+app.get('/google/callback',
+  passport.authenticate('google', {
+    successRedirect: '/protected',
+    failureRedirect: '/auth/failure',
+  })  
+)
+
+app.get('/auth/failure', (req, res) => {
+  res.send('went wrong');
+})
+
+app.get('/protected', IsLoggedIn, (req, res) => {
   res.send('hello');
 });
 
