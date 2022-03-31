@@ -1,9 +1,12 @@
+// require User model
 const { User } = require('../models')
 
+// renders register view
 const registerForm = (req, res) => {
   res.render('register')
 }
 
+// renders login view
 const loginForm = (req, res) => {
   res.render('login')
 }
