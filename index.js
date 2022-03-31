@@ -1,12 +1,11 @@
 const express = require('express')
-const {engine} = require('express-handlebars')
+const routes = require('./routes')
 const app = express()
-const router = express.Router()
+const {engine} = require('express-handlebars')
 const bodyParser = require('body-parser')
 const multer = require('multer')
 const upload = multer({dest: 'static/uploads/'})
 const mongoose = require('mongoose')
-const Keuze = require("./models/user")
 
 let db = null
 const port = process.env.port || 8000
@@ -28,6 +27,10 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/static'));
 app.use(express.json())
 
+// Routes
+app.use('/', routes);
+
+/*
 app.get('/filter', (req, res) => {
     res.render('filter', {text: "Hello world"})
 })
@@ -75,6 +78,7 @@ app.get('/matches', async (req, res) => {
 app.get('*', (req, res) => {
     res.send('404 Not Found')
 })
+*/
 
 app.listen(port, () => {
   console.log(`Example app listening on localhost:${port}`)
