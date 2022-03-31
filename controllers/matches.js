@@ -1,4 +1,4 @@
-const Keuze = require("../models/user")
+const { Keuze } = require('../models')
 
 const matches = async (req, res) => {
     res.render('matches')
@@ -24,6 +24,7 @@ const filteren = async (req, res) => {
       }), 'scholen');
     
     const filtered = await scholen.find(query, null, options).lean();
+    console.log(filtered)
     const title = (scholen.length == 0) ? "Er zijn geen matches gevonden" : "Matches:";
     res.render('matches', {title: title, scholen: filtered});
   };

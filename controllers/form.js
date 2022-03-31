@@ -1,19 +1,26 @@
-const Keuze = require("../models/user")
+const { Keuze } = require('../models')
 
 const form = async (req, res) => {
     res.render('form')
 };
 
-// er wordt uit het formulier een keuze gehaald en opgeslagen in de collectie Keuzes
 const keuze = async (req, res) => {
-  const keuzes = new Keuze({
-    locatie: req.body.locatie,
-    niveau: req.body.niveau,
-    onderwerp: req.body.onderwerp
-  });
-  keuzes.save()
-  res.redirect('matches')
-};
+  const locatie = req.body.locatie
+  const niveau = req.body.niveau
+  const onderwerp = req.body.onderwerp
+  try {
+       const result = await Keuze.create({
+          locatie: locatie,
+          niveau: niveau,
+          onderwerp: onderwerp
+        })
+      return result,
+       res.redirect('matches')
+  } catch {
+    console.log('Niet gelukt om je keuzes op te slaan')
+      res.redirect('form')
+  }
+}
 
 module.exports = {
 	form: form,
