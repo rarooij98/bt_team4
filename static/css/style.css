@@ -103,6 +103,9 @@ input {
 .googlebutton {
    background-color: white;
    padding: 0.5em;
+   border-radius: 1em;
+   text-decoration: none;
+   width: 30%;
 
    display: flex;
    flex-direction: row;
