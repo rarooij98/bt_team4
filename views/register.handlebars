@@ -1,25 +1,18 @@
-<h1>Registreer</h1>   
-    <div class="register">    
+<section class="homeInlog">
     <form id="register" method="post" action="/register">    
-    <div>
-        <label for="email">email</label>
-        <input name="email" type="email" id="email">
-    </div>
-       <div>
-           <label for="gebruikersnaam">gebruikersnaam</label> 
-           <input name="gebruikersnaam" type="text" id="gebruikersnaam" required>
-       </div>
-       <br>
-       <div>
-           <label for="wachtwoord">wachtwoord</label> 
-           <input name="wachtwoord" type="password" id="wachtwoord" required>
-       </div>
-       <br>
-       <button id="reg" type="submit">Registreer</button>
-        <br>
-        <br>
-        <div id="knoppena">
-       <a href="/login">terug naar inloggen</a>
-       </div>
+        <a href="/login" class="backInlog">terug naar inloggen</a>
+        <h3>Registreer</h3> 
+            <label for="email">email</label>
+            <input name="email" type="email" id="email" required>
+    
+            <label for="gebruikersnaam">gebruikersnaam</label> 
+            <input name="gebruikersnaam" type="text" id="gebruikersnaam" required>
+       
+            <label for="wachtwoord">wachtwoord</label> 
+            <input name="wachtwoord" type="password" id="wachtwoord" required>
+       
+       <button class="signinButton" id="reg" type="submit">Registreer</button>
+      
     </form>     
-    </div>  
+</section>
+

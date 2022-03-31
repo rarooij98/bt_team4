@@ -48,13 +48,13 @@ button {
    border: none;
    border-radius: 1em;
 }
-.signinButton {
+/* FOUTE CSS .signinButton {
    color: var(--light-text);
 }
 
 .signinButton :hover {
    background-color: var(--light-text);
-}
+} */
 
 /* Alles om het logo op zijn plaatst te zetten en te laten werken */
 
@@ -207,4 +207,38 @@ input {
 .card ul p {
    display: inline;
    font-weight: 600;
+}
+
+#loginText{
+   margin-left: 6.6em;
+   padding-left: 6.8em;
+}
+
+.signinButton {
+   background-color: var(--accent-color);
+   border: none;
+   border-radius: 1em;
+   padding: 1em;
+   color: var(--light-text); 
+}
+
+.signinButtonForm {
+   background-color: var(--accent-color);
+   border: none;
+   border-radius: 1em;
+   padding-left: 2em;
+   padding-right: 2em;
+   padding-top: 1em;
+   padding-bottom: 1em;
+   color: var(--light-text); 
+}
+
+.signinButton :hover {
+   background-color:rgb(255, 255, 255);
+}
+
+.backInlog {
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+   padding-top: 4em;
 }
