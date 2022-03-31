@@ -23,7 +23,7 @@ const register = async (req, res) => {
           wachtwoord: wachtwoord
         })
       return result,
-       res.redirect('/')
+       res.redirect('/login')
   } catch {
     console.log('Niet gelukt om een account aan te maken, probeer het nog eens')
       res.redirect('register')
@@ -40,7 +40,7 @@ const login = async (req, res) => {
       console.log(deGebruiker.wachtwoord === wachtwoord)
       if (deGebruiker.wachtwoord === wachtwoord) {
         // return deGebruiker
-        res.redirect('/')
+        res.redirect('/profiel')
         console.log('succesvol ingelogd')
       } else {
         //return 'invalid password'
