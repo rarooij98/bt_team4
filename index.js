@@ -1,6 +1,9 @@
 const express = require('express')
 const {engine} = require('express-handlebars')
 const bodyParser = require('body-parser')
+
+require('./auth');
+
 const app = express()
 const router = express.Router()
 
@@ -14,7 +17,6 @@ const res = require('express/lib/response')
 connectDB();
 
 const passport = require('passport');
-require('./auth');
 
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
@@ -26,18 +28,17 @@ app.use(express.static(__dirname + '/static'));
 
 app.use(express.urlencoded({ extended: true}));
 
-
 app.get('/', (req, res) => {
-    res.render('home')
-})
+  res.render('home');
+});
 
 app.get('/auth/google',
   passport.authenticate('google', { scope: [ 'email', 'profile' ] }
 ));
 
-app.get('/', (req, res) => {
-  res.render('loggedin')
-})
+app.get('/protected', (req, res) => {
+  res.send('hello');
+});
 
 // functie om te connecten naar db //
 
@@ -45,7 +46,7 @@ app.get('/', (req, res) => {
 
 app.listen(port, () => {
     console.log(`Example app listening on localhost:${port}`)
-  })
+  });
   
   
   
