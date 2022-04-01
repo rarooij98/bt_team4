@@ -1,5 +1,6 @@
 // require User model
-const { User } = require('../models')
+const { User } = require('../models');
+let session;
 
 // renders register view
 const registerForm = (req, res) => {
@@ -42,6 +43,10 @@ const login = async (req, res) => {
     if(deGebruiker){
       console.log(deGebruiker.wachtwoord === wachtwoord)
       if (deGebruiker.wachtwoord === wachtwoord) {
+        session = req.session;
+
+        session.email = req.body.email;
+        console.log(session);
         // return deGebruiker
         res.redirect('/')
         console.log('succesvol ingelogd')

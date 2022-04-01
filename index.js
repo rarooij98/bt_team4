@@ -8,6 +8,13 @@ const port = process.env.port || 8000
 require('dotenv').config()
 connectDB();
 const bodyParser = require('body-parser');
+const session = require('express-session');
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true
+}))
+
 
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
