@@ -18,7 +18,7 @@ const register = async (req, res) => {
   const wachtwoord = req.body.wachtwoord
 
   try {
-        // const verborgenWachtwoord = await bcrypt.hash(wachtwoord, 10)
+        const verborgenWachtwoord = await bcrypt.hash(wachtwoord, 10)
        
         const result = await User.create({
           email: email,
