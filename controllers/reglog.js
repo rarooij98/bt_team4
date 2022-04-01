@@ -1,4 +1,5 @@
 const { User } = require('../models')
+const nodemailer = require('nodemailer')
 
 const registerForm = (req, res) => {
   res.render('register')
@@ -7,6 +8,15 @@ const registerForm = (req, res) => {
 const loginForm = (req, res) => {
   res.render('login')
 }
+
+// registratie mail
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'group4projecttech1@gmail.com',
+    pass: 'Test_mail123',
+  }
+})
 
 //gebruik van registreren
 const register = async (req, res) => {
@@ -22,6 +32,25 @@ const register = async (req, res) => {
           gebruikersnaam: gebruikersnaam,
           wachtwoord: wachtwoord
         })
+
+        //schrijven van email bij het maken van een account
+      
+      const mailOptions = {
+        from: 'group4projecttech1@gmail.com',
+        to: `${email}`,
+        subject: 'Registratie email',
+        html: `<h2> hi ${gebruikersnaam}, Je account is succesvol aangemaakt!</h2>`,
+      }
+      
+      //versturen van de mail bij registratie
+      transporter.sendMail(mailOptions, function (err, info) {
+        if (err) {
+          console.log(err)
+        } else {
+          console.log('verificatie email is naar je ingevulde email-adres gestuurd')
+        }
+      })
+
       return result,
        res.redirect('/')
   } catch {
