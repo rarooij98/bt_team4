@@ -7,6 +7,8 @@
    font-family: 'Fredoka';
  }
 
+/* Hieronder staan de kleuren die we gebruiken, zodat we deze makkelijker aan kunnen roepen */
+
 :root {
    --bg-light: #8dcfcb;
    --bg-dark: #022756;
@@ -48,6 +50,7 @@ button {
    border: none;
    border-radius: 1em;
 }
+
 .signinButton {
    color: var(--light-text);
 }
@@ -95,10 +98,10 @@ input {
    font-size: 1em;
  }
 
- #meldAan {
-     color: var(--accent-color);
-     text-decoration: none;
- }
+#meldAan {
+   color: var(--accent-color);
+   text-decoration: none;
+}
  
  /**  VOORKEUR & FILTER  **/
 
@@ -109,7 +112,7 @@ input {
 }
 
 .filter p {
-text-align: center;
+text-align: center; 
 }
 
 .filter a, .resultaten a {
@@ -161,50 +164,101 @@ margin: 2em auto 0em auto;
 /* filter resultaten */
 
 .resultaten h2 {
-color: var(--accent-color);
-font-size: 1.25em;
-text-align: center;
+   color: var(--accent-color);
+   font-size: 1.25em;
+   text-align: center;
 }
 
 .resultaten h3 {
-margin-left: 1em;
+   margin-left: 1em;
 }
 
 .resultaten section {
-display: flex;
-flex-wrap: nowrap;
-justify-content: center;
-align-items: stretch;
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: center;
+   align-items: stretch;
 }
 
 .card {
-height: 250px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-background: rgb(255, 255, 255);
-width: 30em;
-box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.1);
-border-radius: 0.25em;
-padding: 1em;
-margin: 1em 1em 1em 0em;
+   height: 250px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   background: rgb(255, 255, 255);
+   width: 30em;
+   box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.1);
+   border-radius: 0.25em;
+   padding: 1em;
+   margin: 1em 1em 1em 0em;
 }
 
 .card:hover {
-background: rgb(250, 250, 250);
-box-shadow: 0px 4px 8px -1px rgba(0, 0, 0, 0.2);
+   background: rgb(250, 250, 250);
+   box-shadow: 0px 4px 8px -1px rgba(0, 0, 0, 0.2);
 }
 
 .card h3, .card p, .card li {
-color: var(--dark-text);
+   color: var(--dark-text);
 }
 
 .card ul {
-list-style: none;
-padding-left: 1.2em;
+   list-style: none;
+   padding-left: 1.2em;
 }
 
 .card ul p {
-display: inline;
-font-weight: 600;
+   display: inline;
+   font-weight: 600;
+}
+
+#loginText{
+   margin-left: 6.6em;
+   padding-left: 6.8em;
+}
+
+.signinButton {
+   background-color: var(--accent-color);
+   border: none;
+   border-radius: 1em;
+   padding: 1em;
+   color: var(--light-text); 
+}
+
+.signinButtonForm {
+   background-color: var(--accent-color);
+   border: none;
+   border-radius: 1em;
+   padding-left: 2em;
+   padding-right: 2em;
+   padding-top: 1em;
+   padding-bottom: 1em;
+   color: var(--light-text); 
+}
+
+.signinButton :hover {
+   background-color:rgb(255, 255, 255);
+}
+
+.backInlog {
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+   padding-top: 4em;
+}
+
+/* Hieronder stijlt de wijzig profiel en uitlog knop */
+
+.uitlogWijzig {
+   background-color: #022756;
+   border: none;
+   border-radius: 1em;
+}
+
+.uitlogWijzig {
+   padding: 1em;
+   color: #F4FFFE;
+}
+
+.uitlogWijzig :hover {
+   background-color:#F4FFFE;
 }
