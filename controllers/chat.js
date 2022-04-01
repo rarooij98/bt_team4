@@ -1,6 +1,12 @@
 // renders home view
 const User = require('../models/user');
 let session;
+
+// renders home view
+const chatroom = async (req, res) => {
+    res.render('chatroom')
+};
+
 const chat = async (req, res) => {
     session = req.session;
 
@@ -16,5 +22,6 @@ const chat = async (req, res) => {
 
 // exports home function
 module.exports = {
-	chat: chat
+	chat: chat,
+    chatroom: chatroom
 };
