@@ -1,5 +1,6 @@
 const { User } = require('../models')
 const nodemailer = require('nodemailer')
+require('dotenv').config()
 
 const registerForm = (req, res) => {
   res.render('register')
@@ -9,12 +10,12 @@ const loginForm = (req, res) => {
   res.render('login')
 }
 
-// registratie mail
+// registratie mail transporter aanmaken (dit is waar je invult via welk emailadres de mails worden verstuurd)
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'group4projecttech1@gmail.com',
-    pass: 'Test_mail123',
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS,
   }
 })
 
@@ -47,7 +48,7 @@ const register = async (req, res) => {
         if (err) {
           console.log(err)
         } else {
-          console.log('verificatie email is naar je ingevulde email-adres gestuurd')
+          console.log('verificatie email is naar je ingevulde email adres gestuurd')
         }
       })
 
