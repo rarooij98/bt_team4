@@ -36,6 +36,11 @@ app.use(express.urlencoded({ extended: true }));
 // routes
 app.use('/', routes);
 
+// more socket
+io.on('connection', socket => {
+  console.log('New WS Connection')
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on localhost:${port}`)
 });
