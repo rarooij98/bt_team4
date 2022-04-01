@@ -1,0 +1,19 @@
+<article class="resultaten">
+
+<h1>{{title}}</h1>
+<h2>Je hebt {{scholen.length}} nieuwe matches!</h2>
+
+<section class="matches">
+{{#each scholen}}
+<!--voor elk resultaat wordt een card gemaakt met de info-->
+<section class="card">
+  <h3>{{this.name}}</h3>
+    <ul>
+      <li> <p>Locatie: </p> {{this.locatie}}</li>
+      <li> <p>Niveau: </p> {{this.niveau}}</li>
+      <li> <p>Onderwerpen: </p>{{this.onderwerpen}}</li>
+    </ul>
+    <a href="./matches.handlebars">Chat met onze opleiding</a> <!--verbinden met een room id om naar chat te gaan-->
+</section>
+{{/each}}
+</article>

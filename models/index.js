@@ -1,5 +1,7 @@
 const user = require('./user');
+const Keuze = require('./user');
 
 module.exports = {
-    User: user
+    User: user,
+    Keuze: Keuze
 }
