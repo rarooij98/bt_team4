@@ -1,8 +1,6 @@
 // Express setup
 const express = require('express')
 const app = express()
-const req = require('express/lib/request')
-const res = require('express/lib/response')
 require('dotenv').config()
 
 // Middleware
