@@ -7,6 +7,7 @@
    font-family: 'Fredoka';
  }
 
+/* Hieronder staan de kleuren die we gebruiken, zodat we deze makkelijker aan kunnen roepen */
 :root {
    --bg-light: #8dcfcb;
    --bg-dark: #022756;
@@ -48,13 +49,6 @@ button {
    border: none;
    border-radius: 1em;
 }
-/* FOUTE CSS .signinButton {
-   color: var(--light-text);
-}
-
-.signinButton :hover {
-   background-color: var(--light-text);
-} */
 
 /* Alles om het logo op zijn plaatst te zetten en te laten werken */
 
@@ -241,4 +235,21 @@ input {
    color: rgb(255, 255, 255);
    text-decoration: none;
    padding-top: 4em;
+}
+
+/* Hieronder stijlt de wijzig profiel en uitlog knop */
+
+.uitlogWijzig {
+   background-color: #022756;
+   border: none;
+   border-radius: 1em;
+}
+
+.uitlogWijzig {
+   padding: 1em;
+   color: #F4FFFE;
+}
+
+.uitlogWijzig :hover {
+   background-color:#F4FFFE;;
 }

@@ -9,6 +9,7 @@ require('dotenv').config()
 connectDB();
 const bodyParser = require('body-parser');
 
+
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');

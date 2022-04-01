@@ -1,3 +1,5 @@
+const bcrypt = require("bcrypt")
+
 // require User model
 const { User } = require('../models')
 
@@ -16,17 +18,16 @@ const register = async (req, res) => {
   const email = req.body.email
   const gebruikersnaam = req.body.gebruikersnaam
   const wachtwoord = req.body.wachtwoord
+  const verborgenWachtwoord = await bcrypt.hash(wachtwoord, 10)
 
   try {
-        const verborgenWachtwoord = await bcrypt.hash(wachtwoord, 10)
-       
         const result = await User.create({
           email: email,
           gebruikersnaam: gebruikersnaam,
-          wachtwoord: wachtwoord
+          wachtwoord: verborgenWachtwoord
         })
       return result,
-       res.redirect('/')
+       res.redirect('/login')
   } catch {
     console.log('Niet gelukt om een account aan te maken, probeer het nog eens')
       res.redirect('register')
@@ -43,7 +44,7 @@ const login = async (req, res) => {
       console.log(deGebruiker.wachtwoord === wachtwoord)
       if (deGebruiker.wachtwoord === wachtwoord) {
         // return deGebruiker
-        res.redirect('/')
+        res.redirect('/profiel')
         console.log('succesvol ingelogd')
       } else {
         //return 'invalid password'
