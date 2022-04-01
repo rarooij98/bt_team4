@@ -1,3 +1,5 @@
+
+
 const express = require('express')
 const session = require('express-session');
 const {engine} = require('express-handlebars')
@@ -56,12 +58,14 @@ app.get('/auth/failure', (req, res) => {
 })
 
 app.get('/protected', IsLoggedIn, (req, res) => {
-  res.send('hello');
+  res.send(`Hello ${req.user.displayName}`);
 });
 
-// functie om te connecten naar db //
-
-
+app.get('/logout', (req, res) => {
+  req.logout();
+  req.session.destroy();
+  res.send('goodbye');
+})
 
 app.listen(port, () => {
     console.log(`Example app listening on localhost:${port}`)
