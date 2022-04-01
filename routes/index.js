@@ -4,7 +4,7 @@ const router = express.Router();
 const home = require('./home');
 const login = require('./login');
 const register = require('./register');
-const error = require('./error')
+const error = require('./error');
 
 router.use('/', home);
 router.use('/login', login);

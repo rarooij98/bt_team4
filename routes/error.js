@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const error = require('../controllers/reglog');
+const reglog = require('../controllers/reglog');
 
-router.get('/error', error);
+router.get('/', reglog.error);
 
 module.exports = router;
