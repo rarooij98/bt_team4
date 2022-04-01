@@ -10,5 +10,6 @@ router.use('/', home);
 router.use('/login', login);
 router.use('/register', register);
 router.use('/error', error);
+router.use('/*', error);
 
 module.exports = router;
