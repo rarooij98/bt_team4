@@ -11,6 +11,11 @@ const loginForm = (req, res) => {
   res.render('login')
 }
 
+// renders error
+const error = (req, res) => {
+  res.render('error')
+}
+
 //gebruik van registreren
 const register = async (req, res) => {
   const email = req.body.email
@@ -55,7 +60,7 @@ const login = async (req, res) => {
     }
 
   } catch (error) {
-    throw new Error(error)
+    res.redirect('/error')
   }
 }
 
@@ -63,5 +68,6 @@ module.exports = {
   login: login,
   register: register,
   registerForm: registerForm,
-  loginForm: loginForm
+  loginForm: loginForm,
+  error: error
 };
