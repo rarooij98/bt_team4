@@ -8,6 +8,7 @@
  }
 
 /* Hieronder staan de kleuren die we gebruiken, zodat we deze makkelijker aan kunnen roepen */
+
 :root {
    --bg-light: #8dcfcb;
    --bg-dark: #022756;
@@ -50,6 +51,14 @@ button {
    border-radius: 1em;
 }
 
+.signinButton {
+   color: var(--light-text);
+}
+
+.signinButton :hover {
+   background-color: var(--light-text);
+}
+
 /* Alles om het logo op zijn plaatst te zetten en te laten werken */
 
 header .logo {
@@ -87,7 +96,7 @@ input {
    margin: 8px 0;
    box-sizing: border-box;
    font-size: 1em;
-}
+ }
 
 #meldAan {
    color: var(--accent-color);
@@ -103,53 +112,53 @@ input {
 }
 
 .filter p {
-   text-align: center;
+text-align: center; 
 }
 
 .filter a, .resultaten a {
-   text-decoration: none;
-   color: var(--light-text);
-   display: block;
-   width: fit-content;
-   margin: 2em auto;
-   background-color: var(--accent-color);
-   border: none;
-   border-radius: 0.5em;
-   padding: 0.75em;
+text-decoration: none;
+color: var(--light-text);
+display: block;
+width: fit-content;
+margin: 2em auto;
+background-color: var(--accent-color);
+border: none;
+border-radius: 0.5em;
+padding: 0.75em;
 }
 
 /* keuze formulier */
 
 .keuze {
-   background-color:#022756;
-   border-radius: 2em;
-   width: fit-content;
-   margin: auto;
-   padding: 1em;
+background-color:#022756;
+border-radius: 2em;
+width: fit-content;
+margin: auto;
+padding: 1em;
 }
 
 .keuze form {
-   display: flex;
-   flex-direction: column;
-   gap: 1em;
-   padding: 3em 8em;
+display: flex;
+flex-direction: column;
+gap: 1em;
+padding: 3em 8em;
 }
 
 .keuze select {
-   width: 100%;
-   padding: 12px 20px;
-   margin: 8px 0;
-   font-size: 1em;
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+font-size: 1em;
 }
 
 .keuze input[type=submit]{
-   color: var(--light-text);
-   background-color: var(--accent-color);
-   border: none;
-   border-radius: 1em;
-   width: fit-content;
-   display: block;
-   margin: 2em auto 0em auto;
+color: var(--light-text);
+background-color: var(--accent-color);
+border: none;
+border-radius: 1em;
+width: fit-content;
+display: block;
+margin: 2em auto 0em auto;
 }   
 
 /* filter resultaten */
@@ -251,5 +260,5 @@ input {
 }
 
 .uitlogWijzig :hover {
-   background-color:#F4FFFE;;
+   background-color:#F4FFFE;
 }
