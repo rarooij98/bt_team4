@@ -1,10 +1,6 @@
 const { Keuze } = require('../models')
 const mongoose = require('mongoose')
 
-const matches = async (req, res) => {
-    res.render('matches')
-};
-
 // alle scholen die voldoen aan de voorkeuren worden opgehaald uit de database
 const filteren = async (req, res) => {
 
@@ -31,6 +27,6 @@ const filteren = async (req, res) => {
   };
 
 module.exports = {
-	matches: matches,
+	//matches: matches,
 	filteren: filteren
 };
