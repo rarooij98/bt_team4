@@ -8,6 +8,8 @@ const port = process.env.port || 8000
 require('dotenv').config()
 connectDB();
 const bodyParser = require('body-parser');
+const bcrypt = require("bcrypt")
+
 
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
