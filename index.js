@@ -1,4 +1,4 @@
-
+require('https').globalAgent.options.rejectUnauthorized = false
 
 const express = require('express')
 const session = require('express-session');
