@@ -1,9 +1,10 @@
-// renders home view
+// renders profielpage view
 const profiel = async (req, res) => {
     res.render('profiel')
 };
 
-// exports home function
+// exports profielpage function
 module.exports = {
 	profiel: profiel
 };
+
