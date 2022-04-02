@@ -63,8 +63,15 @@ const login = async (req, res) => {
   }
 }
 
+const uitloggen = (res, req) => {
+  req.session.destoy()
+  res.redirect('/');
+
+}
+
 module.exports = {
   login: login,
+  uitloggen: uitloggen,
   register: register,
   registerForm: registerForm,
   loginForm: loginForm
