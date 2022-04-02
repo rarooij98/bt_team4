@@ -18,6 +18,15 @@ app.use(express.static(__dirname + '/static'));
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
+//adding sessions
+const session = require('express-session');
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true,
+  cookie: {secure: true}
+}))
+
 app.use('/', routes);
 
 app.listen(port, () => {

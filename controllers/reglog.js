@@ -1,4 +1,5 @@
 const bcrypt = require("bcrypt")
+let session;
 
 // require User model
 const { User } = require('../models')
@@ -45,6 +46,8 @@ const login = async (req, res) => {
       if (deGebruiker.wachtwoord === wachtwoord) {
         // return deGebruiker
         res.redirect('/profiel')
+        session = req.session;
+        session.deGebruiker = req.body.email;
         console.log('succesvol ingelogd')
       } else {
         //return 'invalid password'
