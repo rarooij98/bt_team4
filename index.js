@@ -54,7 +54,7 @@ app.get('/google/callback',
 )
 
 app.get('/auth/failure', (req, res) => {
-  res.send('went wrong');
+  res.send('Something went wrong');
 })
 
 app.get('/protected', IsLoggedIn, (req, res) => {

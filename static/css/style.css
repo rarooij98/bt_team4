@@ -105,19 +105,24 @@ input {
    padding: 0.5em;
    border-radius: 1em;
    text-decoration: none;
-   width: 30%;
+   width: 20em;
 
    display: flex;
    flex-direction: row;
    align-items: center;
+
+   color: var(--dark-text);
+}
+
+.googlebutton:hover {
+   background-color: dodgerblue;
+   color: var(--light-text);
+   cursor: pointer;
 }
 
 .googleimage {
    width: 4em;
-}
-
-.googletext {
-   margin: 1em;
+   margin-right: 0.5em;
 }
 
 /**  VOORKEUR & FILTER  **/
