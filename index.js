@@ -67,6 +67,7 @@ app.get('/auth/failure', (req, res) => {
 })
 
 // route when logged in
+
 // app.get('/protected', IsLoggedIn, (req, res) => {
 //   res.send(`Hello ${req.user.displayName}`);
 // });
@@ -77,6 +78,7 @@ app.get('/protected', IsLoggedIn, (req, res) => {
 
 
 // end session
+
 // app.get('/logout', (req, res) => {
 //   req.logout();
 //   req.session.destroy();
