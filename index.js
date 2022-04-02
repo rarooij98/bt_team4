@@ -1,12 +1,13 @@
 const express = require('express');
-const routes = require('./routes')
-const app = express()
-const { engine } = require('express-handlebars')
-const connectDB = require('./config/db')
+const routes = require('./routes');
+const app = express();
+const { engine } = require('express-handlebars');
+const connectDB = require('./config/db');
 const port = process.env.port || 8000
+const ioPort = process.env.ioPort || 3000
 const bodyParser = require('body-parser');
 const socketio = require('socket.io');
-require('dotenv').config()
+require('dotenv').config();
 connectDB();
 
 // session
@@ -15,10 +16,9 @@ app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true
-}))
+}));
 
 // socket.io
-const ioPort = process.env.ioPort || 3000
 const http = require('http');
 const server = http.createServer(app);
 const io = socketio(server);
@@ -38,13 +38,22 @@ app.use('/', routes);
 
 // more socket
 io.on('connection', socket => {
-  console.log('New WS Connection')
-});
+  console.log('New WS Connection');
+  socket.emin('message', 'Welcome to chatroom!');
+
+  // wanneer een user connects
+  socket.broadcast.emit('message', 'A user has joined the chat');
+
+  // wanneer een user disconnects
+  socket.on('disconnect', () => {
+    io.emit('message', 'A user has left the chat');
+  })
+}); 
 
 app.listen(port, () => {
-  console.log(`Example app listening on localhost:${port}`)
+  console.log(`Example app listening on localhost:${port}`);
 });
 
 server.listen(ioPort, () => {
-  console.log(`Socket test app listening on localhost:${ioPort}`)
+  console.log(`Example app listening on localhost:${ioPort}`);
 });
