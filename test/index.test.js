@@ -17,7 +17,6 @@ describe('School', () => {
             .get('/matches')
             .end((err, res) => {
             res.should.have.status(200);
-            //res.body.should.be.a('array'); //expected {} to be an array
             done();
             });
         });
@@ -25,6 +24,9 @@ describe('School', () => {
     
 /*
 * Test the /POST route*
+
+* Error message: *
+* Timeout of 10000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves *
 */
     
     describe('/POST keuze', () => {
