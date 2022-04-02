@@ -77,10 +77,17 @@ app.get('/protected', IsLoggedIn, (req, res) => {
 
 
 // end session
-app.get('/logout', (req, res) => {
+// app.get('/logout', (req, res) => {
+//   req.logout();
+//   req.session.destroy();
+//   res.send('goodbye');
+// })
+
+app.post('/logout', (req, res) => {
   req.logout();
   req.session.destroy();
-  res.send('goodbye');
+  res.redirect('/');
+  console.log('logged out')
 })
 
 app.listen(port, () => {
