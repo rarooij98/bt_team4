@@ -21,12 +21,13 @@ const register = async (req, res) => {
   const verborgenWachtwoord = await bcrypt.hash(wachtwoord, 10)
 
   try {
-        const result = await User.create({
+        const result = await User.create({ // .create maakt in de db een leeg Keuze document aan
           email: email,
           gebruikersnaam: gebruikersnaam,
           wachtwoord: verborgenWachtwoord
         })
       return result,
+      console.log(email), //werkt
        res.redirect('/login')
   } catch {
     console.log('Niet gelukt om een account aan te maken, probeer het nog eens')
