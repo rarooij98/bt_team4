@@ -103,9 +103,9 @@ input {
    text-decoration: none;
 }
 
-/* #errormail, #errorpassword {
+#errormail, #errorpassword {
    color: var(--accent-color);
-} */
+}
 
  /**  VOORKEUR & FILTER  **/
 
