@@ -23,3 +23,6 @@ app.use('/', routes);
 app.listen(port, () => {
     console.log(`Example app listening on localhost:${port}`)
   })
+
+//export voor mocha/chai
+module.exports = app;
