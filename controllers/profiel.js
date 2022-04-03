@@ -1,6 +1,10 @@
+// importeer gebruikersnaam en email
+const { User } = require('../models/index')
+
 // renders home view
 const profiel = async (req, res) => {
-    res.render('profiel')
+    const user = await User.findOne();
+    res.render('profiel', {naam: user.gebruikersnaam, email: user.email})
 };
 
 // exports home function

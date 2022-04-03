@@ -22,6 +22,58 @@ body {
    color: var(--light-text);
 }
 
+/* vanaf hier voor profiel */
+
+article {
+   text-align: center;
+   background-color: var(--light-text);
+   border-radius: 2em;
+   padding: 1em;
+   margin: 1em 20em;
+}
+
+article:first-of-type {
+   background-color: var(--bg-dark);
+}
+
+article:nth-of-type(2) h1, article:nth-of-type(2) p, article:nth-of-type(2) li {
+   color: var(--dark-text);
+}
+
+article .uitlogWijzig :hover {
+   background-color: initial;
+}
+
+section {
+   display: flex;
+   justify-content: center;
+   gap: 1em;
+   margin: 1em;
+}
+
+ul {
+   text-align: left;
+   display: inline-block;
+   margin: auto;
+}
+
+li {
+   list-style: none;
+   font-weight: bold;
+}
+
+li p {
+   font-weight: normal;
+   display: inline;
+   margin-left: 0.5em;
+}
+
+li button {
+   margin: 0.5em;
+}
+
+/* eind profiel */
+
 header nav ul{
    background-color: none;  
    display: flex; 
@@ -50,6 +102,11 @@ button {
    background-color: var(--accent-color);
    border: none;
    border-radius: 1em;
+}
+
+button a {
+   color: var(--light-text);
+   text-decoration: none;
 }
 
 /* Alles om het logo op zijn plaatst te zetten en te laten werken */
@@ -172,6 +229,7 @@ padding: 0.75em;
 /* keuze formulier */
 
 .keuze {
+display: block;
 background-color:#022756;
 border-radius: 2em;
 width: fit-content;
@@ -205,6 +263,24 @@ margin: 2em auto 0em auto;
 
 /* filter resultaten */
 
+.resultaten {
+   text-align: initial;
+   padding: initial;
+   margin: initial;
+}
+
+.resultaten li {
+   font-weight: initial;
+}
+
+.resultaten ul {
+   margin: initial;
+}
+
+.resultaten:first-of-type {
+   background-color: initial;
+}
+
 .resultaten h2 {
    color: var(--accent-color);
    font-size: 1.25em;
@@ -218,12 +294,13 @@ margin: 2em auto 0em auto;
 .resultaten section {
    display: flex;
    flex-wrap: nowrap;
+   gap: 0em;
    justify-content: center;
    align-items: stretch;
 }
 
 .card {
-   height: 250px;
+   height: 300px;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
