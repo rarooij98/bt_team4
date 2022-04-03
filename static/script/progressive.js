@@ -20,8 +20,8 @@ form.addEventListener('submit', (e) => {
     messages.push('Email moet langer zijn dan 6 tekens');
   }
 
-  if (email.value.length >= 20) {
-    messages.push('Email mag niet langer zijn dan 20 karakters');
+  if (email.value.length >= 25) {
+    messages.push('Email mag niet langer zijn dan 25 tekens');
   }
 
   if (messages.length > 0) {
@@ -42,7 +42,7 @@ form.addEventListener('submit', (e) => {
   }
 
   if (password.value.length >= 20) {
-    messages.push('Wachtwoord mag niet langer zijn dan 20 karakters');
+    messages.push('Wachtwoord mag niet langer zijn dan 20 tekens');
   }
 
   if (messages.length > 0) {
@@ -62,8 +62,8 @@ form.addEventListener('submit', (e) => {
     messages.push('Gebruikersnaam moet langer zijn dan 6 tekens');
   }
 
-  if (username.value.length >= 25) {
-    messages.push('Gebruikersnaam mag niet langer zijn dan 25 karakters');
+  if (username.value.length >= 15) {
+    messages.push('Gebruikersnaam mag niet langer zijn dan 15 tekens');
   }
 
   if (messages.length > 0) {
