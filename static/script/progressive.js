@@ -11,15 +11,15 @@ const errorPassword = document.getElementById('errorpassword');
 form.addEventListener('submit', (e) => {
   let messages = [];
   if (email.value === '' || email.value == null) {
-    messages.push('Email is required');
+    messages.push('Een email is vereist');
   }
 
   if (password.value.length <= 6) {
-    messages.push('Email must be longer than 6 characters');
+    messages.push('Email moet langer zijn dan 6 tekens');
   }
 
   if (password.value.length >= 20) {
-    messages.push('Email must be less than 20 characters');
+    messages.push('Email mag niet langer zijn dan 20 karakters');
   }
 
   if (messages.length > 0) {
@@ -32,15 +32,15 @@ form.addEventListener('submit', (e) => {
 form.addEventListener('submit', (e) => {
   let messages = [];
   if (email.value === '' || email.value == null) {
-    messages.push('Password is required');
+    messages.push('Een wachtwoord is vereist');
   }
 
   if (password.value.length <= 6) {
-    messages.push('Password must be longer than 6 characters');
+    messages.push('Wachtwoord moet langer zijn dan 6 tekens');
   }
 
   if (password.value.length >= 20) {
-    messages.push('Password must be less than 20 characters');
+    messages.push('Wachtwoord mag niet langer zijn dan 20 karakters');
   }
 
   if (messages.length > 0) {
