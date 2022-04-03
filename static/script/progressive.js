@@ -14,11 +14,11 @@ form.addEventListener('submit', (e) => {
     messages.push('Een email is vereist');
   }
 
-  if (password.value.length <= 6) {
+  if (email.value.length <= 6) {
     messages.push('Email moet langer zijn dan 6 tekens');
   }
 
-  if (password.value.length >= 20) {
+  if (email.value.length >= 20) {
     messages.push('Email mag niet langer zijn dan 20 karakters');
   }
 
@@ -31,7 +31,7 @@ form.addEventListener('submit', (e) => {
 // password
 form.addEventListener('submit', (e) => {
   let messages = [];
-  if (email.value === '' || email.value == null) {
+  if (password.value === '' || email.value == null) {
     messages.push('Een wachtwoord is vereist');
   }
 
