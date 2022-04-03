@@ -102,7 +102,11 @@ input {
    color: var(--accent-color);
    text-decoration: none;
 }
- 
+
+/* #errormail, #errorpassword {
+   color: var(--accent-color);
+} */
+
  /**  VOORKEUR & FILTER  **/
 
 /* filter algemeen */
