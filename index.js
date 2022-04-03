@@ -39,7 +39,8 @@ app.use('/', routes);
 // more socket
 io.on('connection', socket => {
   console.log('New WS Connection');
-  socket.emin('message', 'Welcome to chatroom!');
+
+  socket.emit('message', 'Welcome to chatroom!');
 
   // wanneer een user connects
   socket.broadcast.emit('message', 'A user has joined the chat');
@@ -47,6 +48,11 @@ io.on('connection', socket => {
   // wanneer een user disconnects
   socket.on('disconnect', () => {
     io.emit('message', 'A user has left the chat');
+  });
+
+  // listen for chatMessage
+  socket.on('chatMessage', (msg) => {
+    console.log(msg);
   })
 }); 
 
