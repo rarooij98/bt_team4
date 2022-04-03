@@ -2,19 +2,20 @@
 require('https').globalAgent.options.rejectUnauthorized = false
 
 const express = require('express')
+const routes = require('./routes')
+const app = express()
 const session = require('express-session');
 const {engine} = require('express-handlebars')
 const bodyParser = require('body-parser')
 
 // google token
-require('./auth');
+require('./config/google');
 
 function IsLoggedIn(req, res, next) {
   req.user ? next() : res.sendStatus(401);
 }
 
 const passport = require('passport');
-const app = express()
 app.use(session({ secret: 'cats' }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -41,6 +42,9 @@ app.use(bodyParser.urlencoded({ extended: true   }));
 app.use(express.static(__dirname + '/static'));
 app.use(express.urlencoded({ extended: true}));
 
+function IsLoggedIn(req, res, next) {
+  req.user ? next() : res.sendStatus(401);
+}
 
 app.get('/', (req, res) => {
   res.render('home');
