@@ -21,11 +21,11 @@ const userSchema = new Schema({
 })
 
 const keuzeSchema = new Schema({
-    user: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
-        ref: User,
-    },
+    // user: {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     required: true,
+    //     ref: User,
+    // },
     locatie: String,
     niveau: String,
     onderwerp: [String]
