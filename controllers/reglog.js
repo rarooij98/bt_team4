@@ -46,6 +46,7 @@ const login = async (req, res) => {
         session = req.session;
 
         session.email = req.body.email;
+        session.name = deGebruiker.gebruikersnaam;
         console.log(session);
         // return deGebruiker
         res.redirect('/')

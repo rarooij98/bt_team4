@@ -4,7 +4,16 @@ let session;
 
 // renders home view
 const chatroom = async (req, res) => {
-    res.render('chatroom')
+    session = req.session;
+
+    console.log(session.email);
+
+    User.findOne({email: session.email}).lean().then(user => {
+        res.render('chatroom', {
+            user:user,
+        })
+
+    })
 };
 
 const chat = async (req, res) => {
