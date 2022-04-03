@@ -40,7 +40,7 @@ Robin - cb8a3f148620155f4d517ae8d6dd857057815165 - nieuwe controllers en routes 
 Robin - 4a1ae8d8e2d0ec9ee377ba9a5b931b3de118a660 - nieuwe controllers en routes, werkt nog niet <br>
 Robin - 19db161986e12c8fb7d97d483bea5a2f7416cbe8 - matches duplicate render verwijderd, alles werkt <br>
 Robin - 8dc2a51678b004e8a9dc62b3691db1d6acb55d88 - merged filter-en-voorkeuren <br>
-Robin - b5defa9 - test: get login formulier <br>
+Robin - b5defa957aa0a8c428482861c3d0f9ba30132986 - test: get login formulier <br>
 
 
 
