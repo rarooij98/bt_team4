@@ -103,7 +103,7 @@ input {
    text-decoration: none;
 }
 
-#erroremail, #errorpassword {
+#erroremail, #errorpassword, #errorusername {
    color: var(--accent-color);
 }
 
