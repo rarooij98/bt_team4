@@ -50,7 +50,7 @@ app.get('/auth/google',
 app.get('/google/callback',
   passport.authenticate('google', {
     // route when logged in
-    successRedirect: '/profilegoogle',
+    successRedirect: '/profielgoogle',
     // route when failed to login
     failureRedirect: '/auth/failure',
   })  
@@ -60,8 +60,8 @@ app.get('/auth/failure', (req, res) => {
   res.send('Something went wrong');
 })
 
-app.get('/profilegoogle', IsLoggedIn, (req, res) => {
-  res.render('profilegoogle');
+app.get('/profielgoogle', IsLoggedIn, (req, res) => {
+  res.render('profielgoogle');
   console.log('logged in')
 
 });
