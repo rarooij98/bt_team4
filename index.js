@@ -11,10 +11,6 @@ const bodyParser = require('body-parser')
 // google token
 require('./config/google');
 
-function IsLoggedIn(req, res, next) {
-  req.user ? next() : res.sendStatus(401);
-}
-
 const passport = require('passport');
 app.use(session({ secret: 'cats' }));
 app.use(passport.initialize());
