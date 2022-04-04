@@ -7,7 +7,6 @@ const update = async (req, res) => {
 
 // Deze verwijdert het account uit de database
 const verwijder = async (req, res) => {
-<<<<<<< HEAD
     session = req.session
     const deGebruiker = await User.findOne({ 'email': session.email }).lean()
     console.log(deGebruiker)
@@ -16,15 +15,6 @@ const verwijder = async (req, res) => {
         console.log(deGebruiker.gebruikersnaam)
         await User.findOneAndDelete({ gebruikersnaam: deGebruiker.gebruikersnaam });
         // User.find({ username: deGebruiker.gebruikernaam }).remove().exec();
-=======
-    const deGebruiker = await User.findOne({ 'email': req.body.email }).lean()
-    console.log(deGebruiker)
-
-    if (deGebruiker) {
-        session = req.session
-        console.log(session.gebruikersnaam)
-        // User.find({ username: session.username }).remove().exec();
->>>>>>> da2db56c30a9567f532278c5556acb0d3f670d12
         // en destroy de sessie ook lijkt mij?
         res.redirect('/');
     } else {
