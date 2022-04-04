@@ -1,5 +1,4 @@
-
-require('https').globalAgent.options.rejectUnauthorized = false
+require('https').globalAgent.options.rejectUnauthorized = false;
 const express = require('express')
 const routes = require('./routes')
 const app = express()
@@ -29,7 +28,7 @@ app.use(express.urlencoded({ extended: true}));
 // From here is the google login + passport
 // ---------------------------------------------------------------------
 
-require('https').globalAgent.options.rejectUnauthorized = false
+require('https').globalAgent.options.rejectUnauthorized = false;
 require('./config/google');
 
 const passport = require('passport');

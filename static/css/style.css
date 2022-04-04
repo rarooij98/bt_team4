@@ -125,6 +125,14 @@ input {
    margin-right: 0.5em;
 }
 
+.googlelogout {
+   background-color: var(--accent-color);
+   border: none;
+   border-radius: 1em;
+   padding: 1em;
+   color: var(--light-text); 
+}
+
 /**  VOORKEUR & FILTER  **/
 
 /* filter algemeen */
