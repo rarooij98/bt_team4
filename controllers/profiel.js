@@ -12,7 +12,7 @@ const profiel = async (req, res) => {
 };
 
 const uitloggen = (res, req) => {
-    req.session.destoy()
+    req.session.destroy()
     res.render('/');
   
   }
