@@ -17,14 +17,6 @@ const userSchema = new Schema({
     }
 })
 
-const keuzeSchema = new Schema({
-    locatie: String,
-    niveau: String,
-    onderwerp: [String]
-});
-
 const User = mongoose.model('User', userSchema)
-const Keuze = mongoose.model('Keuze', keuzeSchema)
 
 module.exports = User
-module.exports = Keuze

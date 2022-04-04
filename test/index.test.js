@@ -1,30 +1,43 @@
-// hier komt de Mocha/Chai code waarmee index.js getest kan worden
+const app = require('../index');
 
-// import de file die getest moet worden
-const math = require('../index.js');
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+var expect = require('chai').expect
+chai.use(chaiHttp)
 
-// requirements voor mocha en chai
-const assert = require('assert');
-const should = require('chai').should();
-const expect = require('chai').expect;
-
-/** TESTEN IS NOG EEN WORK IN PROGRESS **/
-// hieronder is een test uitprobeersel
-
-// 1: testen of er een ander bericht word weergeven als er geen matches zijn gevonden
-// const title  = (scholen.length == 0) ? "Er zijn geen matches gevonden" : "Matches:";
-describe('No Matches Test', () => {
-    
-    it('should return true: "Er zijn geen matches gevonden"', () => {
-        const scholen = []
-        const result = (scholen.length == 0);
-        expect(result).to.equal(true);
+/*
+* Test the /GET route *
+*/
+describe('/GET login formulier', () => {
+    it('it should GET the login view', (done) => {
+        chai.request(app)
+        .get('/login')
+        .end((err, res) => {
+        expect(res.status).to.be.eq(200);
+        done();
+        });
     });
-    
-    it('should return false: "Matches:"', () => {
-        const scholen = ["item"]
-        const result = (scholen.length == 0);
-        expect(result).to.equal(false);
+});
+
+/*
+* Test the /POST route*
+*/
+describe('/POST keuze', () => {
+    it('it should POST keuze', (done) => {
+        let keuze = {
+            locatie: 'test',
+            niveau: 'test',
+            onderwerp: 'test'
+        }
+        chai.request(app)
+        .post('/form')
+        .send(keuze)
+        .end((err, res) => {
+            expect(res.status).to.be.eq(200);    
+            expect(keuze).to.have.property('locatie');
+            expect(keuze).to.have.property('niveau');
+            expect(keuze).to.have.property('onderwerp');
+            done();
+        });
     });
-    
 });
