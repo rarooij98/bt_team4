@@ -11,9 +11,16 @@ const profiel = async (req, res) => {
     res.render('profiel', {user:user})
 };
 
+const uitloggen = (res, req) => {
+    req.session.destoy()
+    res.render('/');
+  
+  }
+
 
 // exports profielpage function
 module.exports = {
-	profiel: profiel
+	profiel: profiel,
+    uitloggen: uitloggen
 };
 
