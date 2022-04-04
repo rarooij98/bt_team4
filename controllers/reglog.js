@@ -1,3 +1,6 @@
+const { User } = require('../models')
+const nodemailer = require('nodemailer')
+require('dotenv').config()
 const bcrypt = require("bcrypt")
 
 // require User model
@@ -15,6 +18,15 @@ const loginForm = (req, res) => {
   res.render('login')
 }
 
+// registratie mail transporter aanmaken (dit is waar je invult via welk emailadres de mails worden verstuurd)
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS,
+  }
+})
+
 //gebruik van registreren
 const register = async (req, res) => {
   const email = req.body.email
@@ -28,6 +40,25 @@ const register = async (req, res) => {
           gebruikersnaam: gebruikersnaam,
           wachtwoord: verborgenWachtwoord
         })
+
+        //schrijven van email bij het maken van een account
+      
+      const mailOptions = {
+        from: 'group4projecttech1@gmail.com',
+        to: `${email}`,
+        subject: 'Registratie email',
+        html: `<h2> hi ${gebruikersnaam}, Je account is succesvol aangemaakt!</h2>`,
+      }
+      
+      //versturen van de mail bij registratie
+      transporter.sendMail(mailOptions, function (err, info) {
+        if (err) {
+          console.log(err)
+        } else {
+          console.log('verificatie email is naar je ingevulde email adres gestuurd')
+        }
+      })
+
       return result,
        res.redirect('/login')
   } catch {
