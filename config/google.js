@@ -1,3 +1,4 @@
+require('https').globalAgent.options.rejectUnauthorized = false;
 var passport = require('passport');
 var GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
 require('dotenv').config()
