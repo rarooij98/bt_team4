@@ -1,17 +1,13 @@
-<!-- <h1>Hello world ghjsdhliue</h1> -->
-
-<section class="homeInlog">
-<form method="POST" action="/login" id="loginForm">
-                <label>Email</label>
-                <input name="email" type="email" placeholder="Email" required="required">
-
-                <label>Wachtwoord</label>
-                <input name="password" type="password" placeholder="Wachtwoord" required="required">
-
-                <button class="signinButtonForm" type="submit">Login</button>
-    </form>      
+<section class="home">
+    <h1>Welkom bij School Match!</h1>
+    <p>Ben je op zoek naar een nieuwe opleiding?</p>
+    <p>Meld je aan en wordt gematcht met scholen die bij jou passen.</p>
+    <button><a href="register">Meld je nu aan</a></button>
 </section>
 
 <div class="homeInlog">
-    <h3>Nog geen account? <a id="meldAan" href="signup">Meld je nu aan</a></h3>
+    <a href="/auth/google" class="googlebutton">
+        <img src="images/google.png" class="googleimage" alt="google login">
+        Login met je Google account
+    </a>
 </div>

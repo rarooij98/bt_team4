@@ -1,3 +1,5 @@
+const { User } = require('../models')
+let session
 // renders update info pagina
 const update = async (req, res) => {
     res.render('update')
@@ -38,8 +40,9 @@ const bijwerken = (req, res) => {
 
 // exports home function
 module.exports = {
-	update: update,
+	  update: update,
     verwijder: verwijder,
     bijwerken: bijwerken
+
 };
 

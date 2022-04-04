@@ -5,6 +5,7 @@ const home = async (req, res) => {
     res.render('home')
 };
 
+
 // exports home function
 module.exports = {
 	home: home

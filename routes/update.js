@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const {update, verwijder, bijwerken } = require('../controllers/update.js'); // importeer deze variablen vanuit de update.js file
+const update = require('../controllers/update'); // importeer deze variablen vanuit de update.js file
 
-router.get('/update', update ); // verander /update naar de relevante url
-router.get('/verwijder', verwijder );
+router.get('/', update.update ); // verander /update naar de relevante url
+router.post('/', update.verwijder );
 //router.get('/iets', bijwerken ); // wanneer de gebruiker op de pagina /iets is, wordt de functie bijwerken aangeroepen/uitgevoerd --> verander naar relevante pagina-url
 
 module.exports = router;

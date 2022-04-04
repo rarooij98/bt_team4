@@ -14,15 +14,13 @@
       <button type="submit" class="signinButton">Uitloggen</button>
     </form> 
     <br>
-    <form action="verwijder" method="get">   <!--  wanneer je op de button 'account verwijderen' klikt, verstuurt ('post') 'ie dit formulier naar /verwijderen -->
-      <button class="signinButton">Account verwijderen</button>
+    <form action="/update" method="post">   <!--  wanneer je op de button 'account verwijderen' klikt, verstuurt ('post') 'ie dit formulier naar /verwijderen -->
+      <button class="signinButton" type="submit">Account verwijderen</button>
     </form>
   </section>
-
 </article>
 
-<article>
-  <p>Geef je voorkeuren door en match meteen met scholen die bij jou passen</p>
-  <button href="/form" class="uitlogWijzig">Matches zoeken</button>
-  <!-- wijzigen; maak hier een formulier van met een action die post naar [..] ?-->
+<article>    
+    <p>Geef je voorkeuren door en match meteen met scholen die bij jou passen</p>
+    <button class="uitlogWijzig"><a href="/form">Matches zoeken</a></button>
 </article>
