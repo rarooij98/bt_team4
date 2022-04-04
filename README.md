@@ -1,5 +1,11 @@
 # ProjectTech 2022
-Project van team 4 'Fetch First'.
+Project van team 4 'Fetch First': 
+ <a href="https://github.com/Mitchel-DS">Mitchel Staal</a>,
+ <a href="https://github.com/rarooij98">Robin van Rooij</a>,
+ <a href="https://github.com/Sanne1998HvA">Sanne Kes</a>,
+ <a href="https://github.com/DennisHvA">Dennis de Graaf</a>,
+ <a href="https://github.com/SBindels">Sjoerd Bindels</a>,
+ <a href="https://github.com/saskiapool">Saskia Pool</a>.
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![HANDLEBARS](https://img.shields.io/badge/Handlebars.js-f0772b?style=for-the-badge&logo=handlebarsdotjs&logoColor=black)
