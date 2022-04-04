@@ -1,3 +1,5 @@
+
+require('https').globalAgent.options.rejectUnauthorized = false
 const express = require('express')
 const routes = require('./routes')
 const app = express()
