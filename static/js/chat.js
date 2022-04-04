@@ -1,4 +1,5 @@
 const chatForm = document.querySelector('#chat-form');
+const chatMessages = document.querySelector('.chat-messages');
 
 const socket = io('http://localhost:3000');
 
@@ -7,6 +8,9 @@ const socket = io('http://localhost:3000');
 socket.on('message', message => {
     console.log(message);
     outputMessage(message);
+
+    // scholl down
+    chatMessages.scrollTop = chatMessages.scrollHeight;
 });
 
 // message submit 
@@ -25,4 +29,5 @@ function outputMessage(message) {
     const div = document.createElement('div');
     div.classList.add('message');
     div.innerHTML = `<p class="text">${message}</p>`;
+    document.querySelector('.chat-messages').appendChild(div);
 }
