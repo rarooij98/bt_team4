@@ -1,14 +1,18 @@
 <!-- <h1>Hello world ghjsdhliue</h1> -->
 
 <section class="homeInlog">
-<form method="POST" action="/login" id="loginForm">
+<form method="POST" action="/login" id="form">
                 <label>Email</label>
-                <input name="email" type="email" placeholder="Email" required="required">
+                <input name="email" type="email" placeholder="Email" id="email">
+                <p id="erroremail"></p>
 
                 <label>Wachtwoord</label>
-                <input name="password" type="password" placeholder="Wachtwoord" required="required">
+                <input name="password" type="password" placeholder="Wachtwoord" id="password">
+                <p id="errorpassword"></p>
 
-                <button class="signinButtonForm" type="submit">Login</button>
+                <input class="signinButtonForm" type="submit" value="Login">
+
+                {{!-- <button class="signinButtonForm" type="submit">Login</button> --}}
     </form>      
 </section>
 
