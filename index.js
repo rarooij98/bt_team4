@@ -18,6 +18,7 @@ app.use(session({
   saveUninitialized: true
 }));
 
+
 // socket.io
 const http = require('http');
 const server = http.createServer(app);
@@ -31,7 +32,10 @@ app.set('views', './views');
 app.use(bodyParser.urlencoded({ extended: true }));
 // static folder
 app.use(express.static(__dirname + '/static'));
-app.use(express.urlencoded({ extended: true }));
+
+app.use(express.urlencoded({ extended: true}));
+app.use(express.json());
+
 
 // routes
 app.use('/', routes);
@@ -64,3 +68,6 @@ app.listen(port, () => {
 server.listen(ioPort, () => {
   console.log(`Example app listening on localhost:${ioPort}`);
 });
+
+//export voor mocha/chai
+module.exports = app;

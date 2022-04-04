@@ -7,6 +7,8 @@
    font-family: 'Fredoka';
  }
 
+/* Hieronder staan de kleuren die we gebruiken, zodat we deze makkelijker aan kunnen roepen */
+
 :root {
    --bg-light: #8dcfcb;
    --bg-dark: #022756;
@@ -26,11 +28,64 @@ body {
    color: var(--light-text);
 }
 
+/* vanaf hier voor profiel */
+
+article {
+   text-align: center;
+   background-color: var(--light-text);
+   border-radius: 2em;
+   padding: 1em;
+   margin: 1em 20em;
+}
+
+article:first-of-type {
+   background-color: var(--bg-dark);
+}
+
+article:nth-of-type(2) h1, article:nth-of-type(2) p, article:nth-of-type(2) li {
+   color: var(--dark-text);
+}
+
+article .uitlogWijzig :hover {
+   background-color: initial;
+}
+
+section {
+   display: flex;
+   justify-content: center;
+   gap: 1em;
+   margin: 1em;
+}
+
+ul {
+   text-align: left;
+   display: inline-block;
+   margin: auto;
+}
+
+li {
+   list-style: none;
+   font-weight: bold;
+}
+
+li p {
+   font-weight: normal;
+   display: inline;
+   margin-left: 0.5em;
+}
+
+li button {
+   margin: 0.5em;
+}
+
+/* eind profiel */
+
 header nav ul{
    background-color: none;  
    display: flex; 
    padding: 3em;
    justify-content: flex-end;
+   align-items: center;
 }
 
 header li {
@@ -54,13 +109,11 @@ button {
    border: none;
    border-radius: 1em;
 }
-/* FOUTE CSS .signinButton {
-   color: var(--light-text);
-}
 
-.signinButton :hover {
-   background-color: var(--light-text);
-} */
+button a {
+   color: var(--light-text);
+   text-decoration: none;
+}
 
 /* Alles om het logo op zijn plaatst te zetten en te laten werken */
 
@@ -70,13 +123,11 @@ header .logo {
 }
 
 header .logo img {
-   /* align-content: ; */
    max-width: 15em;
    margin-top: 1em;
 }
 
 /* Inlog form */
-
 
 .homeInlog {
    display: flex;
@@ -99,11 +150,62 @@ input {
    margin: 8px 0;
    box-sizing: border-box;
    font-size: 1em;
-}
+ }
 
 #meldAan {
    color: var(--accent-color);
    text-decoration: none;
+}
+
+#loginText{
+   margin-left: 6.6em;
+   padding-left: 6.8em;
+}
+
+.signinButton {
+   background-color: var(--accent-color);
+   border: none;
+   border-radius: 1em;
+   padding: 1em;
+   color: var(--light-text); 
+}
+
+.signinButton :hover {
+   color:rgb(255, 255, 255);
+}
+
+.signinButtonForm {
+   background-color: var(--accent-color);
+   border: none;
+   border-radius: 1em;
+   padding-left: 2em;
+   padding-right: 2em;
+   padding-top: 1em;
+   padding-bottom: 1em;
+   color: var(--light-text); 
+}
+
+.backInlog {
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+   padding-top: 4em;
+}
+
+/* Hieronder stijlt de wijzig profiel en uitlog knop */
+
+.uitlogWijzig {
+   background-color: #022756;
+   border: none;
+   border-radius: 1em;
+}
+
+.uitlogWijzig {
+   padding: 1em;
+   color: #F4FFFE;
+}
+
+.uitlogWijzig :hover {
+   background-color:#F4FFFE;
 }
  
  /**  VOORKEUR & FILTER  **/
@@ -115,56 +217,75 @@ input {
 }
 
 .filter p {
-   text-align: center;
+text-align: center; 
 }
 
 .filter a, .resultaten a {
-   text-decoration: none;
-   color: var(--light-text);
-   display: block;
-   width: fit-content;
-   margin: 2em auto;
-   background-color: var(--accent-color);
-   border: none;
-   border-radius: 0.5em;
-   padding: 0.75em;
+text-decoration: none;
+color: var(--light-text);
+display: block;
+width: fit-content;
+margin: 2em auto;
+background-color: var(--accent-color);
+border: none;
+border-radius: 0.5em;
+padding: 0.75em;
 }
 
 /* keuze formulier */
 
 .keuze {
-   background-color:#022756;
-   border-radius: 2em;
-   width: fit-content;
-   margin: auto;
-   padding: 1em;
+display: block;
+background-color:#022756;
+border-radius: 2em;
+width: fit-content;
+margin: auto;
+padding: 1em;
 }
 
 .keuze form {
-   display: flex;
-   flex-direction: column;
-   gap: 1em;
-   padding: 3em 8em;
+display: flex;
+flex-direction: column;
+gap: 1em;
+padding: 3em 8em;
 }
 
 .keuze select {
-   width: 100%;
-   padding: 12px 20px;
-   margin: 8px 0;
-   font-size: 1em;
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+font-size: 1em;
 }
 
 .keuze input[type=submit]{
-   color: var(--light-text);
-   background-color: var(--accent-color);
-   border: none;
-   border-radius: 1em;
-   width: fit-content;
-   display: block;
-   margin: 2em auto 0em auto;
+color: var(--light-text);
+background-color: var(--accent-color);
+border: none;
+border-radius: 1em;
+width: fit-content;
+display: block;
+margin: 2em auto 0em auto;
 }   
 
 /* filter resultaten */
+
+.resultaten {
+   text-align: initial;
+   padding: initial;
+   margin: initial;
+}
+
+.resultaten li {
+   font-weight: initial;
+}
+
+.resultaten ul {
+   margin: initial;
+}
+
+.resultaten:first-of-type {
+   background-color: initial;
+}
 
 .resultaten h2 {
    color: var(--accent-color);
@@ -179,12 +300,13 @@ input {
 .resultaten section {
    display: flex;
    flex-wrap: nowrap;
+   gap: 0em;
    justify-content: center;
    align-items: stretch;
 }
 
 .card {
-   height: 250px;
+   height: 300px;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
