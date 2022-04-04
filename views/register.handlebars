@@ -1,0 +1,23 @@
+<section class="homeInlog">
+    <form id="form" method="post" action="/register">    
+        <a href="/login" class="backInlog">terug naar inloggen</a>
+        <h3>Registreer</h3> 
+            <label for="email">email</label>
+            <input name="email" type="email" id="email" required>
+            <p id="erroremail"></p>
+    
+            <label for="gebruikersnaam">gebruikersnaam</label> 
+            <input name="gebruikersnaam" type="text" id="username" required>
+            <p id="errorusername"></p>
+       
+            <label for="wachtwoord">wachtwoord</label> 
+            <input name="wachtwoord" type="password" id="password" required>
+            <p id="errorpassword"></p>
+       
+       <input class="signinButtonForm" type="submit" value="Registreer">
+
+       {{!-- <button class="signinButton" id="reg" type="submit">Registreer</button> --}}
+      
+    </form>     
+</section>
+

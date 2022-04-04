@@ -1,28 +1,41 @@
 require('https').globalAgent.options.rejectUnauthorized = false;
-const express = require('express')
-const routes = require('./routes')
-const app = express()
-const session = require('express-session');
-const {engine} = require('express-handlebars')
-const bodyParser = require('body-parser')
-const router = express.Router()
+const express = require('express');
+const routes = require('./routes');
+const app = express();
+const { engine } = require('express-handlebars');
+const connectDB = require('./config/db');
 const port = process.env.port || 8000
-require('dotenv').config()
-
-// db
-const connectDB = require('./config/db')
-const res = require('express/lib/response')
+const ioPort = process.env.ioPort || 3000
+const bodyParser = require('body-parser');
+const socketio = require('socket.io');
+require('dotenv').config();
 connectDB();
 
-// hbs
+// session
+const session = require('express-session');
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true
+}));
+
+
+// socket.io
+const http = require('http');
+const server = http.createServer(app);
+const io = socketio(server);
+
+// handlebars
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
-// bodyparser
-app.use(bodyParser.urlencoded({ extended: true   }));
+
+app.use(bodyParser.urlencoded({ extended: true }));
+// static folder
 app.use(express.static(__dirname + '/static'));
 app.use(express.urlencoded({ extended: true}));
+app.use(express.json());
 
 // ---------------------------------------------------------------------
 // From here is the google login + passport
@@ -40,9 +53,6 @@ function IsLoggedIn(req, res, next) {
   req.user ? next() : res.sendStatus(401);
 }
 
-app.get('/', (req, res) => {
-  res.render('home');
-});
 
 app.get('/auth/google',
   passport.authenticate('google', { scope: [ 'email', 'profile' ] }
@@ -74,6 +84,37 @@ app.post('/logout', (req, res) => {
   console.log('logged out')
 })
 
+// routes
+app.use('/', routes);
+
+// more socket
+io.on('connection', socket => {
+  console.log('New WS Connection');
+
+  socket.emit('message', 'Welcome to chatroom!');
+
+  // wanneer een user connects
+  socket.broadcast.emit('message', 'A user has joined the chat');
+
+  // wanneer een user disconnects
+  socket.on('disconnect', () => {
+    io.emit('message', 'A user has left the chat');
+  });
+
+  // listen for chatMessage
+  socket.on('chatMessage', (msg) => {
+    console.log(msg);
+    io.emit('message', msg)
+  })
+}); 
+
 app.listen(port, () => {
-  console.log(`Example app listening on localhost:${port}`)
+  console.log(`Example app listening on localhost:${port}`);
 });
+
+server.listen(ioPort, () => {
+  console.log(`Example app listening on localhost:${ioPort}`);
+});
+
+//export voor mocha/chai
+module.exports = app;
