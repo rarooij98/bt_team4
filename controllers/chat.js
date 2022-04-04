@@ -6,8 +6,6 @@ let session;
 const chatroom = async (req, res) => {
     session = req.session;
 
-    console.log(session.email);
-
     User.findOne({email: session.email}).lean().then(user => {
         res.render('chatroom', {
             user:user,
@@ -18,8 +16,6 @@ const chatroom = async (req, res) => {
 
 const chat = async (req, res) => {
     session = req.session;
-
-    console.log(session.email);
 
      User.findOne({email: session.email}).lean().then(user => {
         res.render('chat', {

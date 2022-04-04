@@ -53,6 +53,7 @@ io.on('connection', socket => {
   // listen for chatMessage
   socket.on('chatMessage', (msg) => {
     console.log(msg);
+    io.emit('message', msg)
   })
 }); 
 
