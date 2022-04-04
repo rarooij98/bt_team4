@@ -112,14 +112,14 @@ Sjoerd - [05450d159b267c1e3ef80968cea2554c88ca3335](https://github.com/rarooij98
 Sjoerd - [44d264b043a86eb32c48d499d38ca235a12f7bbd](https://github.com/rarooij98/bt_team4/commit/44d264b043a86eb32c48d499d38ca235a12f7bbd) - Mongoose topic timestamps <br>
 
 Mitchel: <br>
-[39c3350bc5e5036b31423d2db2a485d57c262c75](https://github.com/rarooij98/bt_team4/commit/39c3350bc5e5036b31423d2db2a485d57c262c75) - Login functie omgezet, naar werkend MVC <br>
-[5b6a50ea53a1b5c69282dbdd8bdedee480f9e0e3](https://github.com/rarooij98/bt_team4/commit/5b6a50ea53a1b5c69282dbdd8bdedee480f9e0e3) - Session aanmaken die user opslaat en de chat view rendered. + [32a11eefb2c56d1ef3b166625b67ecfdce7e7bdb3](https://github.com/rarooij98/bt_team4/commit/32a11eefb2c56d1ef3b166625b67ecfdce7e7bdb3)<br>
-[da2db56c30a9567f532278c5556acb0d3f670d12](https://github.com/rarooij98/bt_team4/commit/da2db56c30a9567f532278c5556acb0d3f670d12) - User verwijderen functie fixed (met sanne). Zie [3f9befc89fac3afd3bf944cb7324515fe52b44a3](https://github.com/rarooij98/bt_team4/commit/3f9befc89fac3afd3bf944cb7324515fe52b44a3) <br>
-[71d35c3b1a0967a37066fdd7ba90fd30357309f5](https://github.com/rarooij98/bt_team4/commit/71d35c3b1a0967a37066fdd7ba90fd30357309f5) - Chat en chatroom routing added <br>
-[33a1b3b658dc62a3cb6176f159b8034c051d33eb](https://github.com/rarooij98/bt_team4/commit/33a1b3b658dc62a3cb6176f159b8034c051d33eb) - socket.io installatie, en server setup <br>
-[8c89bda00282a745b80ffae533a6447e18e4ccc8](https://github.com/rarooij98/bt_team4/commit/8c89bda00282a745b80ffae533a6447e18e4ccc8) - Message ophalen uit html en on connection met de server berichten vertonen (zoals user joined, user disconnected) <br>
-[9bca1b697c9d9c2c76500a90a1b616fa6c15cd98](https://github.com/rarooij98/bt_team4/commit/9bca1b697c9d9c2c76500a90a1b616fa6c15cd98) - Session toegevoegd aan profiel pagina met user <br>
-[74e4e36623c235440edc962ae88233d7dcacf84c](https://github.com/rarooij98/bt_team4/commit/74e4e36623c235440edc962ae88233d7dcacf84c) - Message wordt opgeslagen en in een div gestopt <br>
+* [39c3350bc5e5036b31423d2db2a485d57c262c75](https://github.com/rarooij98/bt_team4/commit/39c3350bc5e5036b31423d2db2a485d57c262c75) - Login functie omgezet, naar werkend MVC
+* [5b6a50ea53a1b5c69282dbdd8bdedee480f9e0e3](https://github.com/rarooij98/bt_team4/commit/5b6a50ea53a1b5c69282dbdd8bdedee480f9e0e3) - Session aanmaken die user opslaat en de chat view rendered. + [32a11eefb2c56d1ef3b166625b67ecfdce7e7bdb3](https://github.com/rarooij98/bt_team4/commit/32a11eefb2c56d1ef3b166625b67ecfdce7e7bdb3)
+* [da2db56c30a9567f532278c5556acb0d3f670d12](https://github.com/rarooij98/bt_team4/commit/da2db56c30a9567f532278c5556acb0d3f670d12) - User verwijderen functie fixed (met sanne). Zie [3f9befc89fac3afd3bf944cb7324515fe52b44a3](https://github.com/rarooij98/bt_team4/commit/3f9befc89fac3afd3bf944cb7324515fe52b44a3)
+* [71d35c3b1a0967a37066fdd7ba90fd30357309f5](https://github.com/rarooij98/bt_team4/commit/71d35c3b1a0967a37066fdd7ba90fd30357309f5) - Chat en chatroom routing added
+* [33a1b3b658dc62a3cb6176f159b8034c051d33eb](https://github.com/rarooij98/bt_team4/commit/33a1b3b658dc62a3cb6176f159b8034c051d33eb) - socket.io installatie, en server setup
+* [8c89bda00282a745b80ffae533a6447e18e4ccc8](https://github.com/rarooij98/bt_team4/commit/8c89bda00282a745b80ffae533a6447e18e4ccc8) - Message ophalen uit html en on connection met de server berichten vertonen (zoals user joined, user disconnected)
+* [9bca1b697c9d9c2c76500a90a1b616fa6c15cd98](https://github.com/rarooij98/bt_team4/commit/9bca1b697c9d9c2c76500a90a1b616fa6c15cd98) - Session toegevoegd aan profiel pagina met user
+* [74e4e36623c235440edc962ae88233d7dcacf84c](https://github.com/rarooij98/bt_team4/commit/74e4e36623c235440edc962ae88233d7dcacf84c) - Message wordt opgeslagen en in een div gestopt
 
 
 
