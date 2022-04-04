@@ -4,8 +4,8 @@ const form = async (req, res) => {
     res.render('form')
 };
 
-const keuze = (req, res) => {
-  const result = new Keuze({
+const keuze = async (req, res) => {
+  const result = await new Keuze({
     locatie: req.body.locatie,
     niveau: req.body.niveau,
     onderwerp: req.body.onderwerp
