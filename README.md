@@ -105,6 +105,13 @@ Saskia - [178c1ec84268bba2489ab9e93275368b074abd7d](https://github.com/rarooij98
 Saskia - [c267c90d35f7898d78b799823663f53e2fad8474](https://github.com/rarooij98/bt_team4/commit/c267c90d35f7898d78b799823663f53e2fad8474) - error pagina gemaakt, maar cannot /get <br>
 Saskia - [675b64a81a56f03742f3b9eabbdc917d23eb2a0b](https://github.com/rarooij98/bt_team4/commit/c267c90d35f7898d78b799823663f53e2fad8474) - error pagina werkend (met hulp van Mitchel) zie: [b37721b4527e192e1b4e395d9d402eb95065c526](https://github.com/rarooij98/bt_team4/commit/b37721b4527e192e1b4e395d9d402eb95065c526) <br>
 
+Sjoerd - [b0d7b64eb3bc891ce61dca34f134949b3f900be8](https://github.com/rarooij98/bt_team4/commit/b0d7b64eb3bc891ce61dca34f134949b3f900be8) - Added sessions to login <br>
+Sjoerd - [2dbbe8fef188c888bd7a4a1af6fb3091e22d06ae](https://github.com/rarooij98/bt_team4/commit/2dbbe8fef188c888bd7a4a1af6fb3091e22d06ae) - Added logout <br>
+Sjoerd - [5290027b521967925c739c78347bb8c9465f707f](https://github.com/rarooij98/bt_team4/commit/5290027b521967925c739c78347bb8c9465f707f) - Poging MVC structuur toepassen <br>
+Sjoerd - [05450d159b267c1e3ef80968cea2554c88ca3335](https://github.com/rarooij98/bt_team4/commit/05450d159b267c1e3ef80968cea2554c88ca3335) - MVC <br>
+
+
+
 
 ## :balance_scale: Licence
 Licensed met de <a href="https://github.com/rarooij98/bt_team4/blob/main/LICENSE">MIT license</a>. 
