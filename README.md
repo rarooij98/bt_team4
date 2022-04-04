@@ -1,4 +1,5 @@
-# bt_team4
+# ProjectTech 2022
+Project van team 4 'Fetch First'.
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![HANDLEBARS](https://img.shields.io/badge/Handlebars.js-f0772b?style=for-the-badge&logo=handlebarsdotjs&logoColor=black)
@@ -11,9 +12,6 @@
 ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-
-# ProjectTech 2022
-Project van team 4 'Fetch First'.
 
 # Onze Applicatie
 Onze matching app helpt studenten die op zoek zijn naar een nieuwe opleiding door ze te matchen met scholen die overeenkomen met hun interesses.
