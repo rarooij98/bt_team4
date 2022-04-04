@@ -1,9 +1,10 @@
-// require MongoDB
+// require mongoose
 const mongoose = require('mongoose')
 
 // connect to MongoDB
 const connectDB = () => {
   try {
+    
     mongoose.connect (process.env.CONNECTION_STRING, {
       useNewUrlParser: true,
       useUnifiedTopology: true
@@ -13,4 +14,6 @@ const connectDB = () => {
     console.log ('error occured while trying to connect to db',)
   }
  }
- module.exports = connectDB
+
+// export connectDB function 
+module.exports = connectDB
