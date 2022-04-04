@@ -1,15 +1,25 @@
+const { User } = require('../models')
+let session
 // renders update info pagina
 const update = async (req, res) => {
     res.render('update')
 };
 
 // Deze verwijdert het account uit de database
-const verwijder = (req, res) => {
-    session = req.session
-    console.log(session.username)
-    User.find({ username: session.username }).remove().exec();
-    // en destroy de sessie ook lijkt mij?
-    res.redirect('/');
+const verwijder = async (req, res) => {
+    const deGebruiker = await User.findOne({ 'email': req.body.email }).lean()
+    console.log(deGebruiker)
+
+    if (deGebruiker) {
+        session = req.session
+        console.log(session.gebruikersnaam)
+        // User.find({ username: session.username }).remove().exec();
+        // en destroy de sessie ook lijkt mij?
+        res.redirect('/');
+    } else {
+        console.log('probeer opnieuw')
+    }
+
 };
 
 // // Update de data uit de database van een gebruiker
@@ -30,7 +40,7 @@ const verwijder = (req, res) => {
 // exports home function
 module.exports = {
 	update: update,
-    verwijder: verwijder,
+    verwijder: verwijder
     // bijwerken: bijwerken
 };
 
