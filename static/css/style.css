@@ -157,6 +157,10 @@ input {
    text-decoration: none;
 }
 
+#erroremail, #errorpassword, #errorusername {
+   color: var(--accent-color);
+}
+
 #loginText{
    margin-left: 6.6em;
    padding-left: 6.8em;
