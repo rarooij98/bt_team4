@@ -1,8 +1,9 @@
 const bcrypt = require("bcrypt")
 
 // require User model
-const { User } = require('../models')
-let session
+
+const { User } = require('../models');
+let session;
 
 // renders register view
 const registerForm = (req, res) => {
@@ -51,7 +52,6 @@ const login = async (req, res) => {
         session.email = req.body.email;
         session.name = deGebruiker.gebruikersnaam;
         console.log(session);
-
         // return deGebruiker
         res.redirect('/profiel')
         console.log('succesvol ingelogd')
