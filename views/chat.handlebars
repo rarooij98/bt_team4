@@ -1,0 +1,17 @@
+<div class="join-container">
+    <main class="join-main">
+        <form action="/chatroom">
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" name="username" value="{{user.gebruikersnaam}}" id="username" required />
+            </div>
+            <div class="form-control">
+                <label for="room">Room</label>
+                <select name="room" id="room">
+                    <option value="hva">{{user.gebruikersnaam}}</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Join Chat</button>
+        </form>
+    </main>
+</div>

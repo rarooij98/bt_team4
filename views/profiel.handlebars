@@ -1,0 +1,26 @@
+<article>
+  <h1>Mijn profiel</h1>
+  <ul>
+    <li>Naam: <p>{{user.gebruikersnaam}}</p></li>
+    <li>Email: <p>{{user.email}}</p></li>
+  </ul>
+
+  <section>
+    <!--  <form action="bijwerken" method="post"> -->
+    {{!-- <a href="/update" class="signinButton">Wijzig mijn account</button> --}}
+    <!--     </form>    -->
+    <br>
+    <form action="loguit" method="post"> 
+      <button class="signinButton">Uitloggen</button>
+    </form> 
+    <br>
+    <form action="/update" method="post">   <!--  wanneer je op de button 'account verwijderen' klikt, verstuurt ('post') 'ie dit formulier naar /verwijderen -->
+      <button class="signinButton" type="submit">Account verwijderen</button>
+    </form>
+  </section>
+</article>
+
+<article>    
+    <p>Geef je voorkeuren door en match meteen met scholen die bij jou passen</p>
+    <button class="uitlogWijzig"><a href="/form">Matches zoeken</a></button>
+</article>

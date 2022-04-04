@@ -1,0 +1,535 @@
+/* Google font inladen */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap');
+ 
+/* Alles in dit specifieke ingeladen font  */
+*, *::before, *::after {
+   box-sizing: border-box;
+   font-family: 'Fredoka';
+ }
+
+/* Hieronder staan de kleuren die we gebruiken, zodat we deze makkelijker aan kunnen roepen */
+
+:root {
+   --bg-light: #8dcfcb;
+   --bg-dark: #022756;
+   --accent-color: #ff6347;
+   --light-text: #f4fffe;
+   --dark-text: #000000;
+
+   --dark-color-a: #022756;
+	--dark-color-b: #022756;
+	--light-color: #e6e9ff;
+	--success-color: #5cb85c;
+	--error-color: #d9534f;
+}
+
+body {
+   background-color: var(--bg-light);
+   color: var(--light-text);
+}
+
+/* vanaf hier voor profiel */
+
+article {
+   text-align: center;
+   background-color: var(--light-text);
+   border-radius: 2em;
+   padding: 1em;
+   margin: 1em 20em;
+}
+
+article:first-of-type {
+   background-color: var(--bg-dark);
+}
+
+article:nth-of-type(2) h1, article:nth-of-type(2) p, article:nth-of-type(2) li {
+   color: var(--dark-text);
+}
+
+article .uitlogWijzig :hover {
+   background-color: initial;
+}
+
+section {
+   display: flex;
+   justify-content: center;
+   gap: 1em;
+   margin: 1em;
+}
+
+ul {
+   text-align: left;
+   display: inline-block;
+   margin: auto;
+}
+
+li {
+   list-style: none;
+   font-weight: bold;
+}
+
+li p {
+   font-weight: normal;
+   display: inline;
+   margin-left: 0.5em;
+}
+
+li button {
+   margin: 0.5em;
+}
+
+/* eind profiel */
+
+header nav ul{
+   background-color: none;  
+   display: flex; 
+   padding: 3em;
+   justify-content: flex-end;
+   align-items: center;
+}
+
+header li {
+   list-style-type: none;
+}
+
+header li a {
+   font-size: 1.2em;
+   color: var(--light-text);
+   text-decoration: none;
+   padding: 2em;
+   font-weight: 300;
+}
+
+header li a:hover {
+   color: var(--accent-color);
+}
+
+button {
+   background-color: var(--accent-color);
+   border: none;
+   border-radius: 1em;
+}
+
+button a {
+   color: var(--light-text);
+   text-decoration: none;
+}
+
+/* Alles om het logo op zijn plaatst te zetten en te laten werken */
+
+header .logo {
+   justify-content: flex-start;
+   float: left;
+}
+
+header .logo img {
+   max-width: 15em;
+   margin-top: 1em;
+}
+
+/* Inlog form */
+
+.homeInlog {
+   display: flex;
+   justify-content: center;
+   padding-top: 2em;
+}
+
+.homeInlog form{
+   background-color: var(--bg-dark);
+   padding-left: 8em;
+   padding-right: 8em;
+   padding-top: 3em;
+   padding-bottom: 3em;
+   border-radius: 2em;
+}
+
+input {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   box-sizing: border-box;
+   font-size: 1em;
+ }
+
+#meldAan {
+   color: var(--accent-color);
+   text-decoration: none;
+}
+
+#erroremail, #errorpassword, #errorusername {
+   color: var(--accent-color);
+}
+
+#loginText{
+   margin-left: 6.6em;
+   padding-left: 6.8em;
+}
+
+.signinButton {
+   background-color: var(--accent-color);
+   border: none;
+   border-radius: 1em;
+   padding: 1em;
+   color: var(--light-text); 
+}
+
+.signinButton :hover {
+   color:rgb(255, 255, 255);
+}
+
+.signinButtonForm {
+   background-color: var(--accent-color);
+   border: none;
+   border-radius: 1em;
+   padding-left: 2em;
+   padding-right: 2em;
+   padding-top: 1em;
+   padding-bottom: 1em;
+   color: var(--light-text); 
+}
+
+.backInlog {
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+   padding-top: 4em;
+}
+
+/* Hieronder stijlt de wijzig profiel en uitlog knop */
+
+.uitlogWijzig {
+   background-color: #022756;
+   border: none;
+   border-radius: 1em;
+}
+
+.uitlogWijzig {
+   padding: 1em;
+   color: #F4FFFE;
+}
+
+.uitlogWijzig :hover {
+   background-color:#F4FFFE;
+}
+ 
+ /**  VOORKEUR & FILTER  **/
+
+/* filter algemeen */
+   
+.resultaten h1, .keuze h1, .filter h1 {
+   text-align: center;
+}
+
+.filter p {
+text-align: center; 
+}
+
+.filter a, .resultaten a {
+text-decoration: none;
+color: var(--light-text);
+display: block;
+width: fit-content;
+margin: 2em auto;
+background-color: var(--accent-color);
+border: none;
+border-radius: 0.5em;
+padding: 0.75em;
+}
+
+/* keuze formulier */
+
+.keuze {
+display: block;
+background-color:#022756;
+border-radius: 2em;
+width: fit-content;
+margin: auto;
+padding: 1em;
+}
+
+.keuze form {
+display: flex;
+flex-direction: column;
+gap: 1em;
+padding: 3em 8em;
+}
+
+.keuze select {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+font-size: 1em;
+}
+
+.keuze input[type=submit]{
+color: var(--light-text);
+background-color: var(--accent-color);
+border: none;
+border-radius: 1em;
+width: fit-content;
+display: block;
+margin: 2em auto 0em auto;
+}   
+
+/* filter resultaten */
+
+.resultaten {
+   text-align: initial;
+   padding: initial;
+   margin: initial;
+}
+
+.resultaten li {
+   font-weight: initial;
+}
+
+.resultaten ul {
+   margin: initial;
+}
+
+.resultaten:first-of-type {
+   background-color: initial;
+}
+
+.resultaten h2 {
+   color: var(--accent-color);
+   font-size: 1.25em;
+   text-align: center;
+}
+
+.resultaten h3 {
+   margin-left: 1em;
+}
+
+.resultaten section {
+   display: flex;
+   flex-wrap: nowrap;
+   gap: 0em;
+   justify-content: center;
+   align-items: stretch;
+}
+
+.card {
+   height: 300px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   background: rgb(255, 255, 255);
+   width: 30em;
+   box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.1);
+   border-radius: 0.25em;
+   padding: 1em;
+   margin: 1em 1em 1em 0em;
+}
+
+.card:hover {
+   background: rgb(250, 250, 250);
+   box-shadow: 0px 4px 8px -1px rgba(0, 0, 0, 0.2);
+}
+
+.card h3, .card p, .card li {
+   color: var(--dark-text);
+}
+
+.card ul {
+   list-style: none;
+   padding-left: 1.2em;
+}
+
+.card ul p {
+   display: inline;
+   font-weight: 600;
+}
+
+#loginText{
+   margin-left: 6.6em;
+   padding-left: 6.8em;
+}
+
+.signinButton {
+   background-color: var(--accent-color);
+   border: none;
+   border-radius: 1em;
+   padding: 1em;
+   color: var(--light-text); 
+}
+
+.signinButtonForm {
+   background-color: var(--accent-color);
+   border: none;
+   border-radius: 1em;
+   padding-left: 2em;
+   padding-right: 2em;
+   padding-top: 1em;
+   padding-bottom: 1em;
+   color: var(--light-text); 
+}
+
+.signinButton :hover {
+   background-color:rgb(255, 255, 255);
+}
+
+.backInlog {
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+   padding-top: 4em;
+}
+
+/* Chat Page */
+
+.chat-container {
+	max-width: 1100px;
+	background: #fff;
+	margin: 30px auto;
+	overflow: hidden;
+}
+
+.chat-header {
+	background: var(--dark-color-a);
+	color: #fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.chat-main {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+
+.chat-sidebar {
+	background: var(--dark-color-b);
+	color: #fff;
+	padding: 20px 20px 60px;
+	overflow-y: scroll;
+}
+
+.chat-sidebar h2 {
+	font-size: 20px;
+	background: rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.chat-sidebar h3 {
+	margin-bottom: 15px;
+}
+
+.chat-sidebar ul li {
+	padding: 10px 0;
+}
+
+.chat-messages {
+	padding: 30px;
+	max-height: 500px;
+	overflow-y: scroll;
+}
+
+.chat-messages .message {
+	padding: 10px;
+	margin-bottom: 15px;
+	background-color: var(--light-color);
+	border-radius: 5px;
+}
+
+.chat-messages .message .meta {
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--dark-color-b);
+	opacity: 0.7;
+	margin-bottom: 7px;
+}
+
+.chat-messages .message .meta span {
+	color: #777;
+}
+
+.chat-form-container {
+	padding: 20px 30px;
+	background-color: var(--dark-color-a);
+}
+
+.chat-form-container form {
+	display: flex;
+}
+
+.chat-form-container input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	flex: 1;
+}
+
+/* Join Page */
+.join-container {
+	max-width: 500px;
+	margin: 80px auto;
+	color: #fff;
+}
+
+.join-header {
+	text-align: center;
+	padding: 20px;
+	background: var(--dark-color-a);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.join-main {
+	padding: 30px 40px;
+	background: var(--dark-color-b);
+}
+
+.join-main p {
+	margin-bottom: 20px;
+}
+
+.join-main .form-control {
+	margin-bottom: 20px;
+}
+
+.join-main label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.join-main input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main select {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main .btn {
+	margin-top: 20px;
+	width: 100%;
+}
+
+.btn {
+	cursor: pointer;
+	padding: 5px 15px;
+	background: var(--light-color);
+	color: var(--dark-color-a);
+	border: 0;
+	font-size: 17px;
+}
+
+@media (max-width: 700px) {
+	.chat-main {
+		display: block;
+	}
+
+	.chat-sidebar {
+		display: none;
+	}
+}
