@@ -54,7 +54,7 @@ const login = async (req, res) => {
         session = req.session;
         session.email = req.body.email;
         session.name = deGebruiker.gebruikersnaam;
-        //session.isLoggedIn = true;
+        session.isLoggedIn = true;
         console.log(session);
 
         // return deGebruiker

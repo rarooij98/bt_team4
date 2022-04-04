@@ -12,9 +12,21 @@ const profiel = async (req, res) => {
 };
 
 const uitloggen = (res, req) => {
-    req.session.destroy()
-    res.clearCookie(sessionID)
-    res.redirect('login');
+    if (req.session) {
+        req.session.destroy(err => {
+            if (err){
+                res.status(400).send('uitloggen mislukt')
+            } else {
+                session.isLoggedIn = false;
+                res.clearCookie(sessionID)
+                res.redirect('login');
+                res.send('succesvol uitgelogt')
+            }
+        });
+        
+    } else {
+        res.end()
+    }
   
   }
 //errror handeling
