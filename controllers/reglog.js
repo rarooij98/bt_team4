@@ -2,6 +2,7 @@ const bcrypt = require("bcrypt")
 
 // require User model
 const { User } = require('../models')
+let session
 
 // renders register view
 const registerForm = (req, res) => {
@@ -39,10 +40,18 @@ const login = async (req, res) => {
   try {
     const deGebruiker = await User.findOne({'email': req.body.email}).lean()
     const wachtwoord = req.body.wachtwoord
+    console.log(deGebruiker)
 
     if(deGebruiker){
+      const match = await bcrypt.compare(wachtwoord, deGebruiker.wachtwoord)
       console.log(deGebruiker.wachtwoord === wachtwoord)
-      if (deGebruiker.wachtwoord === wachtwoord) {
+      if (match) {
+        deGebruiker.wachtwoord === wachtwoord;
+        session = req.session;
+        session.email = req.body.email;
+        session.name = deGebruiker.gebruikersnaam;
+        console.log(session);
+
         // return deGebruiker
         res.redirect('/profiel')
         console.log('succesvol ingelogd')
