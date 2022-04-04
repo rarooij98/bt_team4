@@ -77,7 +77,9 @@ Als je van plan bent de repository te clonen en de applicatie te gebruiken heb j
 Sanne - 776cf0cc2eeaec24d3f7b5fa17b3d49ae6107ff5 - setup handlebars<br>
 Sanne - a2d468f018c64f4ad970da1acdd5c1050a01440a - db connected en pagina live<br>
 
-Robin - [40cd03e82af35f14355803d1dbf3f2532e99b77d](40cd03e82af35f14355803d1dbf3f2532e99b77d) - test commit <br>
+Robin - [40cd03e82af35f14355803d1dbf3f2532e99b77d](https://github.com/rarooij98/bt_team4/commit/40cd03e82af35f14355803d1dbf3f2532e99b77d) - test commit 1 <br>
+Robin - [40cd03e82af35f14355803d1dbf3f2532e99b77d](commit/40cd03e82af35f14355803d1dbf3f2532e99b77d) - test commit 2 <br>
+
 Robin - 40cd03e82af35f14355803d1dbf3f2532e99b77d - handlebars {{#each}} functie toevoegen <br>
 Robin - 5a7f847d9ed9fb974f0f4448f60a7e638fd75d6c - ophalen filter resultaten met mongoose <br>
 Robin - 019c3b599323a8b950dff8ba6aefb5256592dcab - styles samengevoegd en custom properties toegevoegd <br>
