@@ -46,6 +46,19 @@ Robin - 19db161986e12c8fb7d97d483bea5a2f7416cbe8 - matches duplicate render verw
 Robin - 8dc2a51678b004e8a9dc62b3691db1d6acb55d88 - merged filter-en-voorkeuren <br>
 Robin - b5defa957aa0a8c428482861c3d0f9ba30132986 - test: get login formulier <br>
 
+Dennis - 0246c991cb55cfd57141e1f43aa801bf3ca3b18a - google login oauth <br>
+Dennis - 1a1a6c8777a2a15ac4a07b526604a6b1e7f3af85 - na inloggen kom je op een pagina die met passport is beveiligd <br>
+Dennis - 6c7aec105ad0ea241a84a4951a25f5eb50ab1791 - hbs pagina's eraan gekoppeld <br>
+Dennis - 7549ae8275eacf1cbf62bbc3f639cb61a72d63da - styling voor de google login knop <br>
+Dennis - 9e265b6e92dee24b62dd935e90210c4896d91ab6 - knop voor uitloggen gemaakt <br>
+Dennis - e79be58850bc7ca99c20bc742776fa3125285ed0 - aangepast voor als we gaan mergen <br>
+Dennis - f2690b813197bfb702e4cd2903518174fca556fb - Progressive Enhancement code voor login/registreren <br>
+Dennis - 09406f40c24f500eea68096b2119fa07acd52df7 - script gelinked in hbs <br>
+Dennis - f87c6e35ac6690e7df17d1f5bc6389827d08a28c - PE zit op de login pagina <br>
+Dennis - 2760e82f8b96ea7b7e3bec0f2af7b270a44e9757 - Feedback zit is in het Nederlands <br>
+Dennis - e8d6f57a57da611d2d91dc5e33dc6fd3a98d0fc1 - PE zit op de registreer pagina <br>
+
+
 
 
 
