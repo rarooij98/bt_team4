@@ -7,10 +7,33 @@ Onze matching app helpt studenten die op zoek zijn naar een nieuwe opleiding doo
 Wanneer je gematcht bent met een school kun je meer over hen te weten komen door te chatten.
 
 ## Installatie
-Om deze feature te installeren voer je de volgende stappen uit:
-1. Clone deze repo naar je lokale omgeving.
-2. Zorg dat je de juiste packages geinstalleerd heb met `npm install`. (hieronder staat een lijst met de benodigde packages)
-3. Start de server met de start command `npm run start`.
+Om deze feature te installeren voer je de volgende stappen uit.
+
+Clone deze repository naar local: 
+
+```
+Git clone https://github.com/rarooij98/bt_team4.git
+```
+
+Installeer de benodigde Node modules:
+(hieronder staat een lijst met de benodigde modules)
+
+```
+npm install
+```
+
+Om de application te starten:
+
+```
+npm run start
+```
+
+Maak een .env file aan en include deze in je .gitignote file:
+
+```
+CONNECTION_STRING='yourConnectionString'
+DB_NAME='yourDbName' 
+```
 
 ## Packages die je nodig heb
 Als je van plan bent de repository te clonen en de applicatie te gebruiken heb je een aantal pakketjes nodig om alles te laten werken.
