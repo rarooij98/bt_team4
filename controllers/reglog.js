@@ -4,8 +4,6 @@ require('dotenv').config()
 const bcrypt = require("bcrypt")
 
 // require User model
-
-const { User } = require('../models');
 let session;
 
 // renders register view
