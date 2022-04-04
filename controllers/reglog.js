@@ -29,11 +29,15 @@ const register = async (req, res) => {
         })
       return result,
        res.redirect('/login')
-  } catch {
+  } catch (error) {
+    //throw new Error(error)
+    console.log(error);
+    //functie met dezelfde gebruiker.
     console.log('Niet gelukt om een account aan te maken, probeer het nog eens')
-      res.redirect('register')
+      res.redirect('/register')
   }
 }
+//juiste error handeling (wat gebeurd er) catch error
 
 //gebruik van inloggen
 const login = async (req, res) => {
@@ -50,6 +54,7 @@ const login = async (req, res) => {
         session = req.session;
         session.email = req.body.email;
         session.name = deGebruiker.gebruikersnaam;
+        //session.isLoggedIn = true;
         console.log(session);
 
         // return deGebruiker
@@ -57,7 +62,7 @@ const login = async (req, res) => {
         console.log('succesvol ingelogd')
       } else {
         //return 'invalid password'
-        console.log('fout')
+        console.log('invalid password')
       }
     } else {
       // return 'user was not found'
@@ -68,6 +73,7 @@ const login = async (req, res) => {
     throw new Error(error)
   }
 }
+
 
 module.exports = {
   login: login,

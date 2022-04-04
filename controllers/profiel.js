@@ -13,10 +13,11 @@ const profiel = async (req, res) => {
 
 const uitloggen = (res, req) => {
     req.session.destroy()
-    res.render('/');
+    res.clearCookie(sessionID)
+    res.redirect('login');
   
   }
-
+//errror handeling
 
 // exports profielpage function
 module.exports = {
