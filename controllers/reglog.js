@@ -16,6 +16,11 @@ const loginForm = (req, res) => {
   res.render('login')
 }
 
+// renders error
+const error = (req, res) => {
+  res.render('error')
+}
+
 // registratie mail transporter aanmaken (dit is waar je invult via welk emailadres de mails worden verstuurd)
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -94,7 +99,7 @@ const login = async (req, res) => {
     }
 
   } catch (error) {
-    throw new Error(error)
+    res.redirect('/error')
   }
 }
 
@@ -102,5 +107,6 @@ module.exports = {
   login: login,
   register: register,
   registerForm: registerForm,
-  loginForm: loginForm
+  loginForm: loginForm,
+  error: error
 };

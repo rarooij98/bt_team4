@@ -4,6 +4,7 @@ const router = express.Router();
 const home = require('./home');
 const login = require('./login');
 const register = require('./register');
+const error = require('./error');
 const chat = require('./chat');
 const chatroom = require('./chatroom');
 const profiel = require('./profiel');
@@ -12,8 +13,10 @@ const form = require('./form');
 const matches = require('./matches');
 
 router.use('/', home);
+router.use('/*', error);
 router.use('/login', login);
 router.use('/register', register);
+router.use('/error', error);
 router.use('/chat', chat);
 router.use('/chatroom', chatroom);
 router.use('/profiel', profiel);
