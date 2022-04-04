@@ -119,7 +119,7 @@ Mitchel: <br>
 [33a1b3b658dc62a3cb6176f159b8034c051d33eb](https://github.com/rarooij98/bt_team4/commit/33a1b3b658dc62a3cb6176f159b8034c051d33eb) - socket.io installatie, en server setup <br>
 [8c89bda00282a745b80ffae533a6447e18e4ccc8](https://github.com/rarooij98/bt_team4/commit/8c89bda00282a745b80ffae533a6447e18e4ccc8) - Message ophalen uit html en on connection met de server berichten vertonen (zoals user joined, user disconnected) <br>
 [9bca1b697c9d9c2c76500a90a1b616fa6c15cd98](https://github.com/rarooij98/bt_team4/commit/9bca1b697c9d9c2c76500a90a1b616fa6c15cd98) - Session toegevoegd aan profiel pagina met user <br>
-
+[74e4e36623c235440edc962ae88233d7dcacf84c](https://github.com/rarooij98/bt_team4/commit/74e4e36623c235440edc962ae88233d7dcacf84c) - Message wordt opgeslagen en in een div gestopt <br>
 
 
 
