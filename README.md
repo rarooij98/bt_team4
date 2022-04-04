@@ -98,6 +98,13 @@ Dennis - [f87c6e35ac6690e7df17d1f5bc6389827d08a28c](https://github.com/rarooij98
 Dennis - [2760e82f8b96ea7b7e3bec0f2af7b270a44e9757](https://github.com/rarooij98/bt_team4/commit/2760e82f8b96ea7b7e3bec0f2af7b270a44e9757) - Feedback zit is in het Nederlands <br>
 Dennis - [e8d6f57a57da611d2d91dc5e33dc6fd3a98d0fc1](https://github.com/rarooij98/bt_team4/commit/e8d6f57a57da611d2d91dc5e33dc6fd3a98d0fc1) - PE zit op de registreer pagina <br>
 
+Saskia - [b327c6cc5de531611e3afeec2f247fef3cff6461](https://github.com/rarooij98/bt_team4/commit/b327c6cc5de531611e3afeec2f247fef3cff6461) - log in en registreren werkend gekregen in samenwerking met Sanne, Sjoerd en Dennis  <br>
+Saskia - [f83c569c14e8591dc9c77d9f8e32196897b69ced](https://github.com/rarooij98/bt_team4/commit/b327c6cc5de531611e3afeec2f247fef3cff6461) - controllers bestand gemaakt.   <br>
+Saskia - [291e56477a9028552f6b71562865f9118fd55e15](https://github.com/rarooij98/bt_team4/commit/291e56477a9028552f6b71562865f9118fd55e15) - controllers bestand weggehaald en functie werkend gekregen in reglog.js <br>
+Saskia - [178c1ec84268bba2489ab9e93275368b074abd7d](https://github.com/rarooij98/bt_team4/commit/178c1ec84268bba2489ab9e93275368b074abd7d) - de inloggegevens van de transporter stonden nog niet in .env, die deed het eerst niet, nu wel! <br>
+Saskia - [c267c90d35f7898d78b799823663f53e2fad8474](https://github.com/rarooij98/bt_team4/commit/c267c90d35f7898d78b799823663f53e2fad8474) - error pagina gemaakt, maar cannot /get <br>
+Saskia - [675b64a81a56f03742f3b9eabbdc917d23eb2a0b](https://github.com/rarooij98/bt_team4/commit/c267c90d35f7898d78b799823663f53e2fad8474) - error pagina werkend (met hulp van Mitchel) zie: [b37721b4527e192e1b4e395d9d402eb95065c526](https://github.com/rarooij98/bt_team4/commit/b37721b4527e192e1b4e395d9d402eb95065c526) <br>
+
 
 ## :balance_scale: Licence
 Licensed met de <a href="https://github.com/rarooij98/bt_team4/blob/main/LICENSE">MIT license</a>. 
