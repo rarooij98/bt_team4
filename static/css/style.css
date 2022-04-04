@@ -131,6 +131,7 @@ input {
    border-radius: 1em;
    padding: 1em;
    color: var(--light-text); 
+   width: 10em;
 }
 
 /**  VOORKEUR & FILTER  **/
