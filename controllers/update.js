@@ -3,16 +3,17 @@ const update = async (req, res) => {
     res.render('update')
 };
 
-// // Deze verwijdert het account uit de database
-// router.post('/verwijdergebruiker', (req, res) => {
-//     session = req.session
-//     console.log(session.username)
-//     User.find({ username: session.username }).remove().exec();
-//     res.redirect('/');
-// });
+// Deze verwijdert het account uit de database
+const verwijder = (req, res) => {
+    session = req.session
+    console.log(session.username)
+    User.find({ username: session.username }).remove().exec();
+    // en destroy de sessie ook lijkt mij?
+    res.redirect('/');
+};
 
 // // Update de data uit de database van een gebruiker
-// router.post('/bijwerken', (req, res) => {
+// const bijwerken = (req, res) => {
 //     session = req.session;
 //     User.updateOne({
 //         username: session.username
@@ -22,10 +23,14 @@ const update = async (req, res) => {
 //     }).exec();
 //     session.username = req.body.username;
 //     res.redirect('/profielpagina');
-// })
+// }
+
+// console.log(bijwerken)
 
 // exports home function
 module.exports = {
-	update: update
+	update: update,
+    verwijder: verwijder,
+    // bijwerken: bijwerken
 };
 

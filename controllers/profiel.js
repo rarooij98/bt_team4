@@ -11,6 +11,7 @@ const profiel = async (req, res) => {
     res.render('profiel', {user:user})
 };
 
+
 // exports profielpage function
 module.exports = {
 	profiel: profiel
