@@ -157,6 +157,41 @@ input {
    text-decoration: none;
 }
 
+.googlebutton {
+   background-color: white;
+   padding: 0.5em;
+   border-radius: 1em;
+   text-decoration: none;
+   width: 20em;
+
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+
+   color: var(--dark-text);
+}
+
+.googlebutton:hover {
+   background-color: dodgerblue;
+   color: var(--light-text);
+   cursor: pointer;
+}
+
+.googleimage {
+   width: 4em;
+   margin-right: 0.5em;
+}
+
+.googlelogout {
+   background-color: var(--accent-color);
+   border: none;
+   border-radius: 1em;
+   padding: 1em;
+   color: var(--light-text); 
+   width: 10em;
+}
+
+/**  VOORKEUR & FILTER  **/
 #erroremail, #errorpassword, #errorusername {
    color: var(--accent-color);
 }
@@ -211,8 +246,6 @@ input {
 .uitlogWijzig :hover {
    background-color:#F4FFFE;
 }
- 
- /**  VOORKEUR & FILTER  **/
 
 /* filter algemeen */
    
