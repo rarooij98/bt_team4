@@ -12,28 +12,11 @@ const profiel = async (req, res) => {
     res.render('profiel', {user:user})
 };
 
-// const uitloggen = (res, req) => {
-//     if (req.session) {
-//         req.session.destroy(err => {
-//             if (err){
-//                 res.status(400).send('uitloggen mislukt')
-//             } else {
-//                 session.isLoggedIn = false;
-//                 res.clearCookie(sessionID)
-//                 res.redirect('login');
-//                 res.send('succesvol uitgelogt')
-//             }
-//         });
-        
-//     } else {
-//         res.end()
-//     }
-  
-//   }
-const uitloggen = (res, req) => {
+const uitloggen = (req, res) => {
     session.isLoggedIn = false;
-    res.redirect('login');
-    res.send('succesvol uitgelogt')
+    res.redirect('/login');
+    console.log("succesvol uitgelogt");
+    //res.send('succesvol uitgelogt')
 }
 //errror handeling
 
