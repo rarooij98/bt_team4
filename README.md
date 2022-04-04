@@ -46,6 +46,14 @@ Robin - 19db161986e12c8fb7d97d483bea5a2f7416cbe8 - matches duplicate render verw
 Robin - 8dc2a51678b004e8a9dc62b3691db1d6acb55d88 - merged filter-en-voorkeuren <br>
 Robin - b5defa957aa0a8c428482861c3d0f9ba30132986 - test: get login formulier <br>
 
+Dennis - 0246c991cb55cfd57141e1f43aa801bf3ca3b18a - google login oauth 
+Dennis - 1a1a6c8777a2a15ac4a07b526604a6b1e7f3af85 - na inloggen kom je op een pagina die met passport is beveiligd <br>
+Dennis - 6c7aec105ad0ea241a84a4951a25f5eb50ab1791 - hbs pagina's eraan gekoppeld
+Dennis - 7549ae8275eacf1cbf62bbc3f639cb61a72d63da - styling voor de google login knop
+Dennis - 9e265b6e92dee24b62dd935e90210c4896d91ab6 - knop voor uitloggen gemaakt
+Dennis - e79be58850bc7ca99c20bc742776fa3125285ed0 - aangepast voor als we gaan mergen
+
+
 
 
 
