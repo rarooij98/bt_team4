@@ -74,20 +74,20 @@ Als je van plan bent de repository te clonen en de applicatie te gebruiken heb j
 
 # :pushpin: Belangrijke commits
 
-Sanne - 776cf0cc2eeaec24d3f7b5fa17b3d49ae6107ff5 - setup handlebars<br>
-Sanne - a2d468f018c64f4ad970da1acdd5c1050a01440a - db connected en pagina live<br>
 
-Robin - [40cd03e82af35f14355803d1dbf3f2532e99b77d](https://github.com/rarooij98/bt_team4/commit/40cd03e82af35f14355803d1dbf3f2532e99b77d) - test commit 1 <br>
-Robin - [40cd03e82af35f14355803d1dbf3f2532e99b77d](commit/40cd03e82af35f14355803d1dbf3f2532e99b77d) - test commit 2 <br>
+[a2d468f018c64f4ad970da1acdd5c1050a01440a](https://github.com/rarooij98/bt_team4/commit/a2d468f018c64f4ad970da1acdd5c1050a01440a)
 
-Robin - 40cd03e82af35f14355803d1dbf3f2532e99b77d - handlebars {{#each}} functie toevoegen <br>
-Robin - 5a7f847d9ed9fb974f0f4448f60a7e638fd75d6c - ophalen filter resultaten met mongoose <br>
-Robin - 019c3b599323a8b950dff8ba6aefb5256592dcab - styles samengevoegd en custom properties toegevoegd <br>
-Robin - cb8a3f148620155f4d517ae8d6dd857057815165 - nieuwe controllers en routes <br>
-Robin - 4a1ae8d8e2d0ec9ee377ba9a5b931b3de118a660 - nieuwe controllers en routes, werkt nog niet <br>
-Robin - 19db161986e12c8fb7d97d483bea5a2f7416cbe8 - matches duplicate render verwijderd, alles werkt <br>
-Robin - 8dc2a51678b004e8a9dc62b3691db1d6acb55d88 - merged filter-en-voorkeuren <br>
-Robin - b5defa957aa0a8c428482861c3d0f9ba30132986 - test: get login formulier <br>
+Sanne - [776cf0cc2eeaec24d3f7b5fa17b3d49ae6107ff5](https://github.com/rarooij98/bt_team4/commit/776cf0cc2eeaec24d3f7b5fa17b3d49ae6107ff5) - setup handlebars<br>
+Sanne - [a2d468f018c64f4ad970da1acdd5c1050a01440a](https://github.com/rarooij98/bt_team4/commit/a2d468f018c64f4ad970da1acdd5c1050a01440a) - db connected en pagina live<br>
+
+Robin - [40cd03e82af35f14355803d1dbf3f2532e99b77d](https://github.com/rarooij98/bt_team4/commit/40cd03e82af35f14355803d1dbf3f2532e99b77d) - handlebars {{#each}} functie toevoegen <br>
+Robin - [5a7f847d9ed9fb974f0f4448f60a7e638fd75d6c](https://github.com/rarooij98/bt_team4/commit/5a7f847d9ed9fb974f0f4448f60a7e638fd75d6c) - ophalen filter resultaten met mongoose <br>
+Robin - [019c3b599323a8b950dff8ba6aefb5256592dcab](https://github.com/rarooij98/bt_team4/commit/019c3b599323a8b950dff8ba6aefb5256592dcab) - styles samengevoegd en custom properties toegevoegd <br>
+Robin - [cb8a3f148620155f4d517ae8d6dd857057815165](https://github.com/rarooij98/bt_team4/commit/cb8a3f148620155f4d517ae8d6dd857057815165) - nieuwe controllers en routes <br>
+Robin - [4a1ae8d8e2d0ec9ee377ba9a5b931b3de118a660](https://github.com/rarooij98/bt_team4/commit/4a1ae8d8e2d0ec9ee377ba9a5b931b3de118a660) - nieuwe controllers en routes, werkt nog niet <br>
+Robin - [19db161986e12c8fb7d97d483bea5a2f7416cbe8](https://github.com/rarooij98/bt_team4/commit/19db161986e12c8fb7d97d483bea5a2f7416cbe8) - matches duplicate render verwijderd, alles werkt <br>
+Robin - [8dc2a51678b004e8a9dc62b3691db1d6acb55d88](https://github.com/rarooij98/bt_team4/commit/8dc2a51678b004e8a9dc62b3691db1d6acb55d88) - merged filter-en-voorkeuren <br>
+Robin - [b5defa957aa0a8c428482861c3d0f9ba30132986](https://github.com/rarooij98/bt_team4/commit/b5defa957aa0a8c428482861c3d0f9ba30132986) - test: get login formulier <br>
 
 Dennis - 0246c991cb55cfd57141e1f43aa801bf3ca3b18a - google login oauth <br>
 Dennis - 1a1a6c8777a2a15ac4a07b526604a6b1e7f3af85 - na inloggen kom je op een pagina die met passport is beveiligd <br>
