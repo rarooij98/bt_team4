@@ -111,10 +111,11 @@ Sjoerd - [5290027b521967925c739c78347bb8c9465f707f](https://github.com/rarooij98
 Sjoerd - [05450d159b267c1e3ef80968cea2554c88ca3335](https://github.com/rarooij98/bt_team4/commit/05450d159b267c1e3ef80968cea2554c88ca3335) - MVC <br>
 Sjoerd - [44d264b043a86eb32c48d499d38ca235a12f7bbd](https://github.com/rarooij98/bt_team4/commit/44d264b043a86eb32c48d499d38ca235a12f7bbd) - Mongoose topic timestamps <br>
 
-Mitchel:
-[05450d159b267c1e3ef80968cea2554c88ca3335](https://github.com/rarooij98/bt_team4/commit/05450d159b267c1e3ef80968cea2554c88ca3335) - MVC <br>
-[05450d159b267c1e3ef80968cea2554c88ca3335](https://github.com/rarooij98/bt_team4/commit/05450d159b267c1e3ef80968cea2554c88ca3335) - MVC <br>
-[05450d159b267c1e3ef80968cea2554c88ca3335](https://github.com/rarooij98/bt_team4/commit/05450d159b267c1e3ef80968cea2554c88ca3335) - MVC <br>
+Mitchel: <br>
+[39c3350bc5e5036b31423d2db2a485d57c262c75](https://github.com/rarooij98/bt_team4/commit/39c3350bc5e5036b31423d2db2a485d57c262c75) - Login functie omgezet, naar werkend MVC <br>
+[5b6a50ea53a1b5c69282dbdd8bdedee480f9e0e3](https://github.com/rarooij98/bt_team4/commit/5b6a50ea53a1b5c69282dbdd8bdedee480f9e0e3) - Session aanmaken die user opslaat en de chat view rendered. <br>
+[da2db56c30a9567f532278c5556acb0d3f670d12](https://github.com/rarooij98/bt_team4/commit/da2db56c30a9567f532278c5556acb0d3f670d12) - User verwijderen functie fixed (met sanne). Zie [3f9befc89fac3afd3bf944cb7324515fe52b44a3](https://github.com/rarooij98/bt_team4/commit/3f9befc89fac3afd3bf944cb7324515fe52b44a3) <br>
+
 [05450d159b267c1e3ef80968cea2554c88ca3335](https://github.com/rarooij98/bt_team4/commit/05450d159b267c1e3ef80968cea2554c88ca3335) - MVC <br>
 [05450d159b267c1e3ef80968cea2554c88ca3335](https://github.com/rarooij98/bt_team4/commit/05450d159b267c1e3ef80968cea2554c88ca3335) - MVC <br>
 
