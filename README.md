@@ -23,7 +23,7 @@ Project van team 4 'Fetch First':
 Onze matching app helpt studenten die op zoek zijn naar een nieuwe opleiding door ze te matchen met scholen die overeenkomen met hun interesses.
 Wanneer je gematcht bent met een school kun je meer over hen te weten komen door te chatten.
 
-## Installatie
+## :computer: Installatie
 Om deze feature te installeren voer je de volgende stappen uit.
 
 Clone deze repository naar local: 
@@ -52,7 +52,7 @@ CONNECTION_STRING='yourConnectionString'
 DB_NAME='yourDbName' 
 ```
 
-## Packages die je nodig heb
+## :package: Packages die je nodig heb
 Als je van plan bent de repository te clonen en de applicatie te gebruiken heb je een aantal pakketjes nodig om alles te laten werken.
 
 * body-parser
@@ -72,7 +72,7 @@ Als je van plan bent de repository te clonen en de applicatie te gebruiken heb j
 * passport-google-oauth2
 * https
 
-# Belangrijke commits
+# :pushpin: Belangrijke commits
 
 Sanne - 776cf0cc2eeaec24d3f7b5fa17b3d49ae6107ff5 - setup handlebars<br>
 Sanne - a2d468f018c64f4ad970da1acdd5c1050a01440a - db connected en pagina live<br>
@@ -102,5 +102,5 @@ Dennis - e8d6f57a57da611d2d91dc5e33dc6fd3a98d0fc1 - PE zit op de registreer pagi
 
 
 
-## Licence
+## :balance_scale: Licence
 Licensed met de <a href="https://github.com/rarooij98/bt_team4/blob/main/LICENSE">MIT license</a>. 
