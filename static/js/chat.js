@@ -1,7 +1,7 @@
 const chatForm = document.querySelector('#chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 
-const socket = io('http://localhost:3000');
+const socket = io('http://localhost:8000');
 
 
 // message from server

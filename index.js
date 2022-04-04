@@ -4,8 +4,8 @@ const routes = require('./routes');
 const app = express();
 const { engine } = require('express-handlebars');
 const connectDB = require('./config/db');
-const port = process.env.port || 8000
-const ioPort = process.env.ioPort || 3000
+// const port = process.env.port || 8000
+const ioPort = process.env.ioPort || 8000
 const bodyParser = require('body-parser');
 const socketio = require('socket.io');
 require('dotenv').config();
@@ -106,9 +106,9 @@ io.on('connection', socket => {
   })
 }); 
 
-app.listen(port, () => {
-  console.log(`Example app listening on localhost:${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Example app listening on localhost:${port}`);
+// });
 
 server.listen(ioPort, () => {
   console.log(`Socket server listening on localhost:${ioPort}`);
