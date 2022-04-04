@@ -27,6 +27,10 @@ Als je van plan bent de repository te clonen en de applicatie te gebruiken heb j
 * chai-http
 * mocha
 * nodemon
+* express-session
+* passport
+* passport-google-oauth2
+* https
 
 # Belangrijke commits
 
