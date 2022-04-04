@@ -111,7 +111,7 @@ app.listen(port, () => {
 });
 
 server.listen(ioPort, () => {
-  console.log(`Example app listening on localhost:${ioPort}`);
+  console.log(`Socket server listening on localhost:${ioPort}`);
 });
 
 //export voor mocha/chai
