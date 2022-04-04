@@ -111,6 +111,13 @@ Sjoerd - [5290027b521967925c739c78347bb8c9465f707f](https://github.com/rarooij98
 Sjoerd - [05450d159b267c1e3ef80968cea2554c88ca3335](https://github.com/rarooij98/bt_team4/commit/05450d159b267c1e3ef80968cea2554c88ca3335) - MVC <br>
 Sjoerd - [44d264b043a86eb32c48d499d38ca235a12f7bbd](https://github.com/rarooij98/bt_team4/commit/44d264b043a86eb32c48d499d38ca235a12f7bbd) - Mongoose topic timestamps <br>
 
+Mitchel:
+[05450d159b267c1e3ef80968cea2554c88ca3335](https://github.com/rarooij98/bt_team4/commit/05450d159b267c1e3ef80968cea2554c88ca3335) - MVC <br>
+[05450d159b267c1e3ef80968cea2554c88ca3335](https://github.com/rarooij98/bt_team4/commit/05450d159b267c1e3ef80968cea2554c88ca3335) - MVC <br>
+[05450d159b267c1e3ef80968cea2554c88ca3335](https://github.com/rarooij98/bt_team4/commit/05450d159b267c1e3ef80968cea2554c88ca3335) - MVC <br>
+[05450d159b267c1e3ef80968cea2554c88ca3335](https://github.com/rarooij98/bt_team4/commit/05450d159b267c1e3ef80968cea2554c88ca3335) - MVC <br>
+[05450d159b267c1e3ef80968cea2554c88ca3335](https://github.com/rarooij98/bt_team4/commit/05450d159b267c1e3ef80968cea2554c88ca3335) - MVC <br>
+
 
 
 
