@@ -129,6 +129,21 @@ header .logo img {
 
 /* Inlog form */
 
+.home {
+   flex-direction: column;
+   text-align: center;
+   gap: 0em;
+}
+
+.home button {
+   margin: 1em auto;
+   width: 10em;
+   height: 4em;
+   padding: 0.5em;
+   border-radius: 0.5em;
+   font-weight: bold;
+}
+
 .homeInlog {
    display: flex;
    justify-content: center;
@@ -396,10 +411,6 @@ margin: 2em auto 0em auto;
    padding-top: 1em;
    padding-bottom: 1em;
    color: var(--light-text); 
-}
-
-.signinButton :hover {
-   background-color:rgb(255, 255, 255);
 }
 
 .backInlog {
