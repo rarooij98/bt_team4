@@ -88,7 +88,7 @@ Sanne <br>
 * [678ae0575e126e95e88e86ce6a6f0c9b9bb47188](https://github.com/rarooij98/bt_team4/commit/678ae0575e126e95e88e86ce6a6f0c9b9bb47188) - Verwijder gebruiker werkt
 
 Robin <br>
-[40cd03e82af35f14355803d1dbf3f2532e99b77d](https://github.com/rarooij98/bt_team4/commit/40cd03e82af35f14355803d1dbf3f2532e99b77d) - handlebars {{#each}} functie toevoegen <br>
+* [40cd03e82af35f14355803d1dbf3f2532e99b77d](https://github.com/rarooij98/bt_team4/commit/40cd03e82af35f14355803d1dbf3f2532e99b77d) - handlebars {{#each}} functie toevoegen <br>
 * [5a7f847d9ed9fb974f0f4448f60a7e638fd75d6c](https://github.com/rarooij98/bt_team4/commit/5a7f847d9ed9fb974f0f4448f60a7e638fd75d6c) - ophalen filter resultaten met mongoose <br>
 * [019c3b599323a8b950dff8ba6aefb5256592dcab](https://github.com/rarooij98/bt_team4/commit/019c3b599323a8b950dff8ba6aefb5256592dcab) - styles samengevoegd en custom properties toegevoegd <br>
 * [cb8a3f148620155f4d517ae8d6dd857057815165](https://github.com/rarooij98/bt_team4/commit/cb8a3f148620155f4d517ae8d6dd857057815165) - nieuwe controllers en routes <br>
