@@ -4,10 +4,12 @@ const routes = require('./routes');
 const app = express();
 const { engine } = require('express-handlebars');
 const connectDB = require('./config/db');
-// const port = process.env.port || 8000
-const ioPort = process.env.ioPort || 8000
+const port = process.env.PORT || 8000
 const bodyParser = require('body-parser');
 const socketio = require('socket.io');
+// socket.io
+const http = require('http').Server(app);
+const io = socketio(http);
 require('dotenv').config();
 connectDB();
 
@@ -19,12 +21,6 @@ app.use(session({
   saveUninitialized: false
 
 }));
-
-
-// socket.io
-const http = require('http');
-const server = http.createServer(app);
-const io = socketio(server);
 
 // handlebars
 app.engine('handlebars', engine());
@@ -107,12 +103,8 @@ io.on('connection', socket => {
   })
 }); 
 
-// app.listen(port, () => {
-//   console.log(`Example app listening on localhost:${port}`);
-// });
-
-server.listen(ioPort, () => {
-  console.log(`Socket server listening on localhost:${ioPort}`);
+http.listen(port, () => {
+  console.log(`Example app listening on localhost:${port}`);
 });
 
 //export voor mocha/chai
