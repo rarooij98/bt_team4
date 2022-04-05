@@ -83,7 +83,7 @@ Sanne <br>
 * [0955731133a6142b5e202718c0d0178320b5a2d5](https://github.com/rarooij98/bt_team4/commit/0955731133a6142b5e202718c0d0178320b5a2d5) - Style & kleur
 * [9f1bee9250f4e7f3dd742072cffa2823b76e91c9](https://github.com/rarooij98/bt_team4/commit/9f1bee9250f4e7f3dd742072cffa2823b76e91c9) - Style forms
 * [ca3a5457ddd3bd36d5c8f6a31e206233a4e7d6f8](https://github.com/rarooij98/bt_team4/commit/ca3a5457ddd3bd36d5c8f6a31e206233a4e7d6f8) - Hash blokt niet meer de registreer functie
-* [2dbd024fe53022c7cac9c29dfff31a658ebc2a4e](https://github.com/rarooij98/bt_team4/commit/2dbd024fe53022c7cac9c29dfff31a658ebc2a4e)&[c7449e951f9eb10ffe316dfa1959cda5f630cc02](https://github.com/rarooij98/bt_team4/commit/c7449e951f9eb10ffe316dfa1959cda5f630cc02) - Hashing gefixt
+* [2dbd024fe53022c7cac9c29dfff31a658ebc2a4e](https://github.com/rarooij98/bt_team4/commit/2dbd024fe53022c7cac9c29dfff31a658ebc2a4e) &  [c7449e951f9eb10ffe316dfa1959cda5f630cc02](https://github.com/rarooij98/bt_team4/commit/c7449e951f9eb10ffe316dfa1959cda5f630cc02) - Hashing gefixt
 * [a1da5f5948be094eb4b790dcde0d75917a2ec1ea](https://github.com/rarooij98/bt_team4/commit/a1da5f5948be094eb4b790dcde0d75917a2ec1ea) - Decrypt password en login
 * [678ae0575e126e95e88e86ce6a6f0c9b9bb47188](https://github.com/rarooij98/bt_team4/commit/678ae0575e126e95e88e86ce6a6f0c9b9bb47188) - Verwijder gebruiker werkt
 
