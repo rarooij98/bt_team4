@@ -568,6 +568,80 @@ margin: 2em auto 0em auto;
 	font-size: 17px;
 }
 
+/* Hieronder de stijl voor de about page */
+
+.about {
+   width: 100%;
+   height: 100vh;
+   background-color: var(--light-color);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.about .content img {
+   height: 40%;
+   width: 40%;
+   max-width: 100%;
+}
+
+.text {
+   width: 550px;
+   max-width: 100%;
+   padding: 0 10px;
+}
+
+.content {
+   width: 1280px;
+   max-width: 95%;
+   margin: 0 auto;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.text h1 {
+   color: var(--light-text);
+   font-size: 3em;
+   margin-bottom: 25px;
+   text-transform: capitalize;
+   letter-spacing: 2px;
+}
+
+.text h2 {
+   color: var(--accent-color);
+   font-size: 2em;
+   line-height: 28px;
+   letter-spacing: 1px;
+   margin-bottom: 30px;
+}
+
+.text p {
+   color: var(--light-text);
+   font-size: 1em;
+   line-height: 28px;
+   letter-spacing: 1px;
+   margin-bottom: 20px;
+
+}
+
+#shareButton {
+   background-color: var(--accent-color);
+   color: #000000;
+   border: 2px solid transparent;
+   text-decoration: none;
+   padding: 5px 20px;
+   border-radius: 30px;
+   font-size: 1em;
+   font-weight: bold;
+}
+
+#shareButton:hover {
+   transform: scale(1.2);
+}
+
+
 @media (max-width: 700px) {
 	.chat-main {
 		display: block;
